@@ -1,0 +1,125 @@
+@import 'bootstrap/dist/css/bootstrap-reboot.css';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,700,700i|Work+Sans');
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Work Sans', system-ui;
+  background-color: #f9f9f9;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23ced4da' fill-opacity='1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	background-position-y: 0;
+	background-repeat: repeat;
+	animation: animatedBackground 20s ease-in-out;
+}
+.grid {
+  display: grid;
+  padding-right: 25px;
+  padding-left: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 25px;
+  grid-gap: 25px;
+}
+.grid > * {
+  grid-column: span 12;
+  padding: 25px;
+  border: 2px solid #ced4da;
+  background-color: #fff;
+}
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .grid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    font-size: 2rem;
+  }
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 2.8rem;
+  }
+  .container {
+    max-width: 1140px;
+  }
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media (min-width: 2000px) {
+  .container {
+    max-width: 1840px;
+  }
+}
+h1,
+.h1 {
+  font-size: 2.5em;
+}
+
+h2,
+.h2 {
+  font-size: 2em;
+}
+
+h3,
+.h3 {
+  font-size: 1.75em;
+}
+
+h4,
+.h4 {
+  font-size: 1.5em;
+}
+
+h5,
+.h5 {
+  font-size: 1.25em;
+}
+
+h6,
+.h6 {
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+dt {
+  font-family: 'Josefin Sans', system-ui;
+  font-weight: 700;
+}
+strong {
+  font-weight: 700;
+}
+dl {
+  margin-bottom: 0;
+}
+hr {
+  border: 1px solid #ced4da;
+}
+@keyframes animatedBackground {
+	to { background-position-y: 100%; }
+}
