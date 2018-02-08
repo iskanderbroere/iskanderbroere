@@ -40,6 +40,7 @@
     margin-top: 25px;
     color: #f9f9f9;
     line-height: 76px;
+    background-color: #212529;
     background-image: url('~/assets/images/chalkboard.jpg');
     & h1 {
       margin-bottom: -0.6rem;
