@@ -66,6 +66,7 @@ body {
   padding-left: 25px;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 25px;
+  margin-bottom: 25px;
   grid-gap: 25px;
 }
 .grid > * {
@@ -167,6 +168,17 @@ dl {
 }
 hr {
   border: 1px solid #ced4da;
+}
+a {
+  color: #212529;
+  font-weight: 700;
+  transition: color .2s, box-shadow .2s;
+}
+a:hover {
+  color: #212529;
+  box-shadow: 0 3px #212529;
+  text-decoration: none;
+  font-weight: 700;
 }
 @keyframes animatedBackground {
 	to { background-position-y: 100%; }
