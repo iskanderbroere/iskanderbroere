@@ -61,16 +61,12 @@ body {
 	animation: animatedBackground 20s ease-in-out;
 }
 .grid {
-  display: grid;
   padding-right: 25px;
   padding-left: 25px;
-  grid-template-columns: repeat(4, 1fr);
   margin-top: 25px;
   margin-bottom: 25px;
-  grid-gap: 25px;
 }
 .grid > * {
-  grid-column: span 12;
   padding: 25px;
   border: 2px solid #ced4da;
   background-color: #fff;
@@ -94,9 +90,6 @@ body {
   .container {
     max-width: 720px;
   }
-  .grid {
-    grid-template-columns: repeat(8, 1fr);
-  }
 }
 
 @media (min-width: 992px) {
@@ -114,9 +107,6 @@ body {
   }
   .container {
     max-width: 1140px;
-  }
-  .grid {
-    grid-template-columns: repeat(12, 1fr);
   }
 }
 @media (min-width: 2000px) {
