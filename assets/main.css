@@ -1,11 +1,59 @@
 @import 'bootstrap/dist/css/bootstrap-reboot.css';
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,700,700i|Work+Sans');
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Josefin Sans Bold '),
+    local('Josefin Sans-Bold'),
+    url('~/assets/fonts/josefin-sans-latin-700.woff2') format('woff2'),
+    url('~/assets/fonts/josefin-sans-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('Josefin Sans Light italic'),
+    local('Josefin Sans-Lightitalic'),
+    url('~/assets/fonts/josefin-sans-latin-300italic.woff2') format('woff2'),
+    url('~/assets/fonts/josefin-sans-latin-300italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('Work Sans Regular '),
+    local('Work Sans-Regular'),
+    url('~/assets/fonts/work-sans-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+    url('~/assets/fonts/work-sans-latin-300.woff') format('woff'); /* Modern Browsers */
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Work Sans Bold '),
+    local('Work Sans-Bold'),
+    url('~/assets/fonts/work-sans-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('~/assets/fonts/work-sans-latin-700.woff') format('woff'); /* Modern Browsers */
+}
+
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.6rem;
   font-family: 'Work Sans', system-ui;
+  font-weight: 300;
   background-color: #f9f9f9;
   background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23ced4da' fill-opacity='1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 	background-position-y: 0;
