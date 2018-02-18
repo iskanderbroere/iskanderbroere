@@ -67,7 +67,7 @@ main {
 }
 section {
   padding: 25px;
-  border: 2px dotted #212529;
+  border: 2px solid #ced4da;
   background-color: #fff;
 }
 .container {
@@ -141,7 +141,7 @@ dl {
 }
 hr {
   border: none;
-  border-bottom: 2px dotted #212529;
+  border-bottom: 2px solid #ced4da;
 }
 a {
   color: #212529;
