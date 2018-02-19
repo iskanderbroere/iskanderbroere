@@ -60,8 +60,6 @@ body {
 	animation: animatedBackground 20s ease-in-out;
 }
 main {
-  padding-right: 25px;
-  padding-left: 25px;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -78,10 +76,6 @@ section {
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
-  }
-  main {
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 
@@ -157,7 +151,7 @@ a:hover {
   font-weight: 700;
 }
 @keyframes animatedBackground {
-	to { background-position-y: 100%; }
+	to { background-position-y: 500%; }
 }
 p {
   margin-bottom: 0;

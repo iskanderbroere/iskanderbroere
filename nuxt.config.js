@@ -25,6 +25,7 @@ module.exports = {
       }
     ]
   },
+  modules: ["@nuxtjs/icon"],
   loading: { color: "#ced4da" },
   css: ["~/assets/main.css"]
 }
