@@ -20,30 +20,3 @@
     </main>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-p {
-  margin-bottom: 0;
-}
-h2 {
-  margin-bottom: 0;
-}
-em {
-  font-weight: 300;
-}
-nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px;
-  margin-top: 25px;
-  color: #f9f9f9;
-  line-height: 76px;
-  background-color: #212529;
-  background-image: url('~/assets/images/chalkboard.jpg');
-  & h1 {
-    margin-bottom: -0.6rem;
-  }
-}
-</style>
