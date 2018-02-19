@@ -34,5 +34,31 @@ module.exports = {
     background_color: "#f9f9f9"
   },
   loading: { color: "#ced4da" },
-  css: ["~/assets/main.css"]
+  css: ["~/assets/main.css"],
+  render: {
+    http2: { push: true },
+    gzip: { threshold: 1 }
+  },
+  generate: {
+    minify: {
+      collapseBooleanAttributes: true,
+      collapseWhitespace: false,
+      decodeEntities: true,
+      minifyCSS: true,
+      minifyJS: true,
+      processConditionalComments: true,
+      removeAttributeQuotes: false,
+      removeComments: true,
+      removeEmptyAttributes: true,
+      removeOptionalTags: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: false,
+      removeTagWhitespace: false,
+      sortAttributes: true,
+      sortClassName: false,
+      trimCustomFragments: true,
+      useShortDoctype: true
+    }
+  }
 }
