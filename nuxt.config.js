@@ -4,6 +4,9 @@ module.exports = {
   },
   mode: "universal",
   head: {
+    htmlAttrs: {
+      dir: "ltr"
+    },
     title: "Iskander Broere - modern full-stack web applications",
     meta: [
       { "http-equiv": "x-ua-compatible", content: "ie=edge" },

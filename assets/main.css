@@ -30,8 +30,8 @@
   src:
     local('Work Sans Regular '),
     local('Work Sans-Regular'),
-    url('~/assets/fonts/work-sans-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-    url('~/assets/fonts/work-sans-latin-300.woff') format('woff'); /* Modern Browsers */
+    url('~/assets/fonts/work-sans-latin-300.woff2') format('woff2'),
+    url('~/assets/fonts/work-sans-latin-300.woff') format('woff');
 }
 
 @font-face {
@@ -42,8 +42,8 @@
   src:
     local('Work Sans Bold '),
     local('Work Sans-Bold'),
-    url('~/assets/fonts/work-sans-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-    url('~/assets/fonts/work-sans-latin-700.woff') format('woff'); /* Modern Browsers */
+    url('~/assets/fonts/work-sans-latin-700.woff2') format('woff2'),
+    url('~/assets/fonts/work-sans-latin-700.woff') format('woff');
 }
 
 html {
@@ -115,7 +115,6 @@ h1,
 h2,
 .h2 {
   font-size: 2em;
-  margin-bottom: 0;
 }
 
 h3,
@@ -131,7 +130,7 @@ h3 {
 strong {
   font-weight: 700;
 }
-dl {
+dl, p, address, h2, .h2 {
   margin-bottom: 0;
 }
 hr {
@@ -152,9 +151,6 @@ a:hover {
 }
 @keyframes animatedBackground {
 	to { background-position-y: 500%; }
-}
-p {
-  margin-bottom: 0;
 }
 em {
   font-weight: 300;

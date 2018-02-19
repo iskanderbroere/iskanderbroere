@@ -15,7 +15,7 @@
           <dd>PWAs - CI - Static Hosting - Decoupled Applications</dd>
         </dl>
         <hr>
-        <p><em>Eager to learn, always seeking to improve, perfectionistic yet practical, that is who I am.</em> Still reading? Hit me up! <a href="mailto:iskanderbroere@gmail.com">iskanderbroere@gmail.com</a></p>
+        <p><em>Eager to learn, always seeking to improve, perfectionistic yet practical, that is who I am.</em> Still reading? Hit me up! </p><address><a href="mailto:iskanderbroere@gmail.com">iskanderbroere@gmail.com</a></address>
       </section>
     </main>
   </div>
