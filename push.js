@@ -20,6 +20,10 @@ const generateHeaderFile = context => {
   const files = glob.sync(`${generateDir}/**/*.js`)
   let _headers = "\n/*\n"
   files.forEach(file => {
+    if (/workbox/.test(file) || /sw/.test(file)) {
+      debug("no preload", file.replace(generateDir, ""))
+      return
+    }
     _headers += `  Link: <${file.replace(
       generateDir,
       ""
