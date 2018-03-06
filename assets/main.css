@@ -50,40 +50,6 @@ section {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  body {
-    font-size: 2rem;
-  }
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    font-size: 2.8rem;
-  }
-  .container {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 2000px) {
-  .container {
-    max-width: 1840px;
-  }
-}
 h1,
 .h1 {
   font-size: 2.5em;
@@ -139,7 +105,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-top: 25px;
   color: #f9f9f9;
   line-height: 76px;
@@ -147,5 +114,57 @@ nav {
   background-image: url('~/assets/images/chalkboard.jpg');
   & h1 {
     margin-bottom: -0.6rem;
+  }
+}
+.icons svg {
+  fill: #f9f9f9;
+  width: 25px;
+  height: 25px;
+}
+.icons svg:not(:last-child) {
+  margin-right: 25px;
+}
+.icons {
+  display: flex;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    font-size: 2rem;
+  }
+  .container {
+    max-width: 960px;
+  }
+  .icons svg {
+    width: 36px;
+    height: 36px;
+  }
+  .icons svg:not(:last-child) {
+    margin-right: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 2.4rem;
+  }
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 2000px) {
+  .container {
+    max-width: 1840px;
   }
 }
