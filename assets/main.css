@@ -23,35 +23,12 @@
     url('~/assets/fonts/josefin-sans-latin-300italic.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 300;
-  src:
-    local('Work Sans Regular '),
-    local('Work Sans-Regular'),
-    url('~/assets/fonts/work-sans-latin-300.woff2') format('woff2'),
-    url('~/assets/fonts/work-sans-latin-300.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-display: block;
-  font-weight: 700;
-  src:
-    local('Work Sans Bold '),
-    local('Work Sans-Bold'),
-    url('~/assets/fonts/work-sans-latin-700.woff2') format('woff2'),
-    url('~/assets/fonts/work-sans-latin-700.woff') format('woff');
-}
-
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.6rem;
-  font-family: 'Work Sans', system-ui;
+  font-family: system-ui;
   font-weight: 300;
   background-color: #f9f9f9;
   background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ced4da' fill-opacity='1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -124,7 +101,7 @@ h3,
 h1,
 h2,
 h3 {
-  font-family: 'Josefin Sans', system-ui;
+  font-family: 'Contrail One', system-ui;
   font-weight: 700;
 }
 strong {
