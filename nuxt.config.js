@@ -17,7 +17,16 @@ module.exports = {
       }
     ]
   },
-  modules: ["@nuxtjs/pwa", "./push.js"],
+  modules: [
+    "@nuxtjs/pwa",
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-96952292-3"
+      }
+    ],
+    "./push.js"
+  ],
   meta: {
     viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
     name: "Iskander Broere - modern full-stack web applications",
