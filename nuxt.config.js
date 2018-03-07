@@ -9,7 +9,6 @@ module.exports = {
     },
     title: "Iskander Broere - modern full-stack web applications",
     meta: [
-      { "http-equiv": "x-ua-compatible", content: "ie=edge" },
       { name: "google", content: "nositelinkssearchbox" },
       {
         name: "google-site-verification",
