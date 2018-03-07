@@ -1,0 +1,9 @@
+[build]
+  publish = "dist"
+  command = "nuxt generate"
+[context.production]
+  command = "nuxt generate"
+  [context.production.environment]
+    YARN_FLAGS = "--no-ignore-optional"
+    NODE_VERSION = "9.7.1"
+    YARN_VERSION = "1.5.1"
