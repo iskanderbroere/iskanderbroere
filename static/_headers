@@ -4,6 +4,5 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Cache-Control: public, max-age=2592000, must-revalidate
-  Content-Security-Policy: script-src 'self' https://www.google-analytics.com
 /_nuxt/img/*
   Cache-Control: public, max-age=31536000, must-revalidate
