@@ -11,15 +11,16 @@ module.exports = function module(moduleOptions) {
     debug("Generating a _headers file")
     generateHeaderFile(this, moduleOptions)
   }
-
   this.nuxt.hook("generate:distCopied", hook)
 }
 
-const generateHeaderFile = context => {
-  const generateDir = path.resolve(context.options.generate.dir)
+const generateHeaderFile = ({ options }) => {
+  const generateDir = path.resolve(options.generate.dir)
   const files = glob.sync(`${generateDir}/**/*.js`)
+  // append to _headers file
   let _headers = "\n/*\n"
   files.forEach(file => {
+    // dont preload workbox files
     if (/workbox/.test(file) || /sw/.test(file)) {
       debug("no preload", file.replace(generateDir, ""))
       return
