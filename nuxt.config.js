@@ -18,6 +18,7 @@ module.exports = {
   },
   modules: [
     "@nuxtjs/pwa",
+    "@nuxtjs/sitemap",
     [
       "@nuxtjs/google-analytics",
       {
@@ -26,6 +27,10 @@ module.exports = {
     ],
     "./modules/headers.js"
   ],
+  sitemap: {
+    hostname: "https://iskanderbroere.nl",
+    generate: true
+  },
   meta: {
     viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
     name: "Iskander Broere - modern full-stack web applications",
