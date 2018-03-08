@@ -135,7 +135,12 @@ nav {
 }
 .icons-sm {
   display: flex;
+  align-content: center;
   margin-top: 10px;
+}
+.icons a, .icons-sm a {
+  display: flex;
+  align-content: center;
 }
 .icons {
   display: none;

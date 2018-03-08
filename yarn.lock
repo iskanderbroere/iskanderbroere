@@ -91,17 +91,17 @@
   dependencies:
     hash-sum "^1.0.2"
 
-"@nuxtjs/meta@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.1.0.tgz#61de8f8a5a9c5518f85e357042f3a6049b5f6047"
+"@nuxtjs/meta@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.2.1.tgz#ad7c8658ef0357cdef56856a9ff21d595102e089"
 
-"@nuxtjs/pwa@^2.0.6":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-2.0.6.tgz#59455a43e30bfb9737f143f7bfa2d0f1d3a06fdc"
+"@nuxtjs/pwa@^2.0.8":
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-2.0.8.tgz#0e36ea1e3a63c1531f4e9e6b1d03a9390b09f8b5"
   dependencies:
     "@nuxtjs/icon" "^2.1.0"
     "@nuxtjs/manifest" "^2.1.0"
-    "@nuxtjs/meta" "^2.1.0"
+    "@nuxtjs/meta" "^2.2.1"
     "@nuxtjs/workbox" "^2.2.0"
 
 "@nuxtjs/workbox@^2.2.0":

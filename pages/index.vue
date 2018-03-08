@@ -33,7 +33,7 @@
           <dt>write</dt>
           <dd>modern full-stack web applications</dd>
           <dt>use</dt>
-          <dd>JS - HTML - CSS - GraphQL - Markdown - MongoDB - PostgreSQL - Vue - React - Express - Mongoose - Sequelize - PostCSS - SCSS - Apollo GraphQL - Bootstrap - Webpack - Yarn - NPM - Prettier - ESLint - Stylelint - VSCode - Netlify - GitHub</dd>
+          <dd>JS - HTML - CSS - GraphQL - Markdown - MongoDB - PostgreSQL - Vue - React - Express - Mongoose - Sequelize - PostCSS - SCSS - Apollo GraphQL - Bootstrap 4 - Webpack - Yarn - NPM - Prettier - ESLint - Stylelint - VSCode - Netlify - GitHub</dd>
           <dt>like</dt>
           <dd>PWAs - CI - Static Hosting - Decoupled Applications</dd>
         </dl>
