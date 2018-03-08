@@ -20,7 +20,7 @@ const generateHeaderFile = ({ options }) => {
   // append to _headers file
   let _headers = "\n/*\n"
   files.forEach(file => {
-    // dont preload workbox files
+    // don't preload workbox files
     if (/workbox/.test(file) || /sw/.test(file)) {
       return
     }
