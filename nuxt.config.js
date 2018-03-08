@@ -24,7 +24,7 @@ module.exports = {
         id: "UA-96952292-3"
       }
     ],
-    "./push.js"
+    "./modules/headers.js"
   ],
   meta: {
     viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",

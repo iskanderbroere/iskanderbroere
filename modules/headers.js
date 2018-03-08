@@ -8,7 +8,7 @@ module.exports = function module(moduleOptions) {
     return
   }
   const hook = () => {
-    debug("Generating a _headers file")
+    debug("Generating the _headers file")
     generateHeaderFile(this, moduleOptions)
   }
   this.nuxt.hook("generate:distCopied", hook)
@@ -22,7 +22,6 @@ const generateHeaderFile = ({ options }) => {
   files.forEach(file => {
     // dont preload workbox files
     if (/workbox/.test(file) || /sw/.test(file)) {
-      debug("no preload", file.replace(generateDir, ""))
       return
     }
     _headers += `  Link: <${file.replace(
