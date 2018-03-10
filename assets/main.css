@@ -137,10 +137,6 @@ nav {
   align-content: center;
   margin-top: 10px;
 }
-.icons a, .icons-sm a {
-  display: flex;
-  align-content: center;
-}
 .icons {
   display: none;
 }
@@ -162,6 +158,8 @@ nav {
   }
   .icons {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
