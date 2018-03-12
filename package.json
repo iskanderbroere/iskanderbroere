@@ -18,6 +18,7 @@
     "@nuxtjs/pwa": "^2.0.8",
     "@nuxtjs/sitemap": "^0.0.3",
     "bootstrap": "^4.0.0",
+    "glob-all": "^3.1.0",
     "nuxt": "^1.4.0"
   },
   "devDependencies": {
@@ -27,6 +28,7 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-vue": "^4.2.2",
-    "prettier": "^1.11.1"
+    "prettier": "^1.11.1",
+    "purgecss-webpack-plugin": "^0.20.1"
   }
 }

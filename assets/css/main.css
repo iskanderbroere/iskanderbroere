@@ -1,4 +1,4 @@
-@import 'bootstrap/dist/css/bootstrap-reboot.css';
+@import './bootstrap-reboot.css';
 @font-face {
   font-family: 'Josefin Sans';
   font-style: normal;

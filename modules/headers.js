@@ -1,6 +1,6 @@
 const debug = require("debug")("nuxt:netlify-http2-server-push")
 const path = require("path")
-const glob = require("glob")
+const glob = require("glob-all")
 const fs = require("fs")
 
 module.exports = function module(moduleOptions) {
@@ -16,19 +16,24 @@ module.exports = function module(moduleOptions) {
 
 const generateHeaderFile = ({ options }) => {
   const generateDir = path.resolve(options.generate.dir)
-  const files = glob.sync(`${generateDir}/**/*.js`)
+  const files = glob.sync([`${generateDir}/**/*.js`, `${generateDir}/**/*.css`])
   // append to _headers file
   let _headers = "\n/*\n"
   files.forEach(file => {
-    // don't preload workbox files
     if (/workbox/.test(file) || /sw/.test(file)) {
       return
+    } else if (/.\.css$/.test(file)) {
+      _headers += `  Link: <${file.replace(
+        generateDir,
+        ""
+      )}>; rel=preload; as=style\n`
+      return
+    } else {
+      _headers += `  Link: <${file.replace(
+        generateDir,
+        ""
+      )}>; rel=preload; as=script\n`
     }
-    _headers += `  Link: <${file.replace(
-      generateDir,
-      ""
-    )}>; rel=preload; as=script\n`
-    debug(file.replace(generateDir, ""))
   })
   fs.appendFileSync(`${generateDir}/_headers`, _headers)
   debug("_headers file generated")
