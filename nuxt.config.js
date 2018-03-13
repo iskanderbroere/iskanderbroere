@@ -45,7 +45,7 @@ module.exports = {
   },
   manifest: {
     name: "Iskander Broere - modern full-stack web applications",
-    short_name: "Iskander Broere",
+    short_name: "I. Broere",
     description:
       "JS - HTML - CSS - GraphQL - Vue - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications",
     background_color: "#f9f9f9"
