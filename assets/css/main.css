@@ -11,7 +11,7 @@
 @font-face {
   font-family: 'Josefin Sans';
   font-style: normal;
-  font-display: block;
+  font-display: swap;
   font-weight: 700;
   src:
     local('Josefin Sans Bold '),
@@ -23,7 +23,7 @@
 @font-face {
   font-family: 'Josefin Sans';
   font-style: italic;
-  font-display: block;
+  font-display: swap;
   font-weight: 300;
   src:
     local('Josefin Sans Light italic'),
@@ -72,7 +72,7 @@ h1,
 h2,
 h3,
 dt {
-  font-family: 'Josefin Sans', system-ui;
+  font-family: "Josefin Sans", system-ui;
   font-weight: 700;
 }
 strong {
