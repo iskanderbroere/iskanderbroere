@@ -91,9 +91,6 @@ a.email:hover, a.email:focus {
 .green {
   color: #0fcc83;
 }
-@keyframes animatedBackground {
-	to { background-position-y: 500%; }
-}
 em {
   font-weight: 300;
 }
@@ -189,4 +186,7 @@ nav {
   .container {
     max-width: 1840px;
   }
+}
+@keyframes animatedBackground {
+	to { background-position-y: 500%; }
 }
