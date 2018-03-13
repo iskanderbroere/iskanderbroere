@@ -93,7 +93,7 @@ a.email {
 }
 a.email:hover, a.email:focus {
   color: #0fcc83;
-  box-shadow: 0 4px #0fcc83;
+  box-shadow: 0 2px #0fcc83;
   text-decoration: none;
   font-weight: 700;
 }
