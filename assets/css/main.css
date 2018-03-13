@@ -1,5 +1,14 @@
 @import './bootstrap-reboot.css';
 @font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: local('Work Sans Light'), local('WorkSans-Light'),
+       url('~/assets/fonts/work-sans-v3-latin-300.woff2') format('woff2'),
+       url('~/assets/fonts/work-sans-v3-latin-300.woff') format('woff');
+}
+@font-face {
   font-family: 'Josefin Sans';
   font-style: normal;
   font-display: block;
@@ -26,7 +35,7 @@ html {
   font-size: 16px;
 }
 body {
-  font-family: system-ui;
+  font-family: "Work Sans", system-ui;
   font-weight: 300;
   background-color: #f9f9f9;
   background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ced4da' fill-opacity='1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
