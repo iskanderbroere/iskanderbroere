@@ -39,7 +39,7 @@ module.exports = {
     viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
     name: "Iskander Broere - modern full-stack web applications",
     description:
-      "JS - HTML - CSS - GraphQL - Vue - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications",
+      "JS - HTML - CSS - GraphQL - Vue.js - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications",
     lang: "en",
     mobileApp: false
   },
@@ -47,7 +47,7 @@ module.exports = {
     name: "Iskander Broere - modern full-stack web applications",
     short_name: "I. Broere",
     description:
-      "JS - HTML - CSS - GraphQL - Vue - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications",
+      "JS - HTML - CSS - GraphQL - Vue.js - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications",
     background_color: "#f9f9f9"
   },
   loading: { color: "#f9f9f9" },
