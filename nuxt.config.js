@@ -50,7 +50,7 @@ module.exports = {
       "JS - HTML - CSS - GraphQL - Vue.js - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications",
     background_color: "#f9f9f9"
   },
-  loading: { color: "#f9f9f9" },
+  loading: { color: "#0fcc83" },
   css: ["~/assets/css/main.css"],
   build: {
     extractCSS: true,
