@@ -196,7 +196,7 @@ nav h1 a:hover {
 
 @media (min-width: 992px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
   .container {
     max-width: 960px;
@@ -212,7 +212,7 @@ nav h1 a:hover {
 
 @media (min-width: 1200px) {
   html {
-    font-size: 24px;
+    font-size: 20px;
   }
   .container {
     max-width: 1140px;
