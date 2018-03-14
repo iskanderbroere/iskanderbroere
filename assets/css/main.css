@@ -147,6 +147,9 @@ nav {
     margin-bottom: -0.6rem;
   }
 }
+nav h1 a:hover {
+  text-decoration: none;
+}
 .icons a svg, .icons-sm a svg {
   display: flex;
   fill: #f9f9f9;
