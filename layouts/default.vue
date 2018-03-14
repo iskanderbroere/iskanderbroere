@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <nav>
-      <nuxt-link to="/"><h1><em>iskander</em><strong>broere</strong></h1></nuxt-link>
+      <h1><em>iskander</em><strong>broere</strong></h1>
       <div class="icons">
         <a
           href="https://www.linkedin.com/in/iskander-broere-51065615b/"
