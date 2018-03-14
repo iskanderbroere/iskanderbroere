@@ -1,6 +1,6 @@
 const path = require("path")
 const PurgecssPlugin = require("purgecss-webpack-plugin")
-const glob = require("glob")
+const glob = require("glob-all")
 
 class NuxtCssExtractor {
   static extract(content) {
@@ -58,7 +58,10 @@ module.exports = {
       if (!isDev) {
         config.plugins.push(
           new PurgecssPlugin({
-            paths: glob.sync(path.join(__dirname, "./pages/**/*.vue")),
+            paths: glob.sync([
+              path.join(__dirname, "./pages/**/*.vue"),
+              path.join(__dirname, "./layouts/**/*.vue")
+            ]),
             extractors: [
               {
                 extractor: NuxtCssExtractor,
