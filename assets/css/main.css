@@ -144,7 +144,7 @@ nav {
     margin-bottom: -0.6rem;
   }
 }
-nav h1 a:hover {
+nav a:hover {
   text-decoration: none;
 }
 .icons a svg, .icons-sm a svg {
