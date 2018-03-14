@@ -64,11 +64,9 @@ main a {
 }
 section, footer {
   padding: 25px;
+  border-bottom: 2px solid #212529;
   border-top: 2px solid #212529;
   background-color: #fff;
-}
-section {
-  border-bottom: 2px solid #212529;
 }
 .container {
   width: 100%;
