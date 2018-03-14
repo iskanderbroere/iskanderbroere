@@ -9,6 +9,14 @@
        url('~/assets/fonts/work-sans-v3-latin-300.woff') format('woff');
 }
 @font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Work Sans Bold'), local('WorkSans-Bold'),
+       url('~/assets/fonts/work-sans-v3-latin-700.woff2') format('woff2'),
+       url('~/assets/fonts/work-sans-v3-latin-700.woff') format('woff');
+}
+@font-face {
   font-family: 'Josefin Sans';
   font-style: normal;
   font-display: swap;
@@ -38,19 +46,29 @@ body {
   font-family: "Work Sans", system-ui;
   font-weight: 300;
   background-color: #f9f9f9;
-  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ced4da' fill-opacity='1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='22' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ced4da' fill-opacity='1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 	background-position-y: 0;
 	background-repeat: repeat;
 	animation: animatedBackground 20s ease-in-out;
+}
+ul {
+  padding-left: 20px;
+  margin: 0;
 }
 main {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-section {
+main a {
+  color: #212529;
+}
+section, footer {
   padding: 25px;
-  border: 2px solid #ced4da;
+  border-top: 2px solid #212529;
   background-color: #fff;
+}
+section {
+  border-bottom: 2px solid #212529;
 }
 .container {
   width: 100%;
@@ -83,19 +101,34 @@ dl, p, address, h2, .h2 {
 }
 hr {
   border: none;
-  border-bottom: 2px solid #ced4da;
+  border-bottom: 2px solid #212529;
 }
-a.email {
-  color: #0fcc83;
+.email, .projects, main a {
   font-weight: 700;
   box-shadow: 0 0 #0fcc83;
   transition: color .2s, box-shadow .2s, text-shadow .2s;
 }
-a.email:hover, a.email:focus {
+.email {
   color: #0fcc83;
-  box-shadow: 0 2px #0fcc83;
-  text-decoration: none;
+}
+.icons .projects {
+  color: #f9f9f9;
+  text-transform: uppercase;
+}
+.icons-sm .projects {
+  color: #212529;
+  text-transform: uppercase;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.email:hover, .email:focus, .projects:hover, .projects:focus, main a:hover, main a:focus {
   font-weight: 700;
+  color: #0fcc83;
+  box-shadow: 0 4px #0fcc83;
+  text-decoration: none;
 }
 .green {
   color: #0fcc83;
@@ -111,7 +144,6 @@ nav {
   justify-content: space-between;
   padding-left: 25px;
   padding-right: 25px;
-  margin-top: 25px;
   color: #f9f9f9;
   line-height: 76px;
   background-image: url('~/assets/images/chalkboard.jpg');
@@ -147,15 +179,15 @@ nav {
 .icons-sm a:hover svg, .icons a:hover svg {
   fill: #0fcc83;
 }
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  nav {
+    margin-top: 25px;
+  }
+  section, footer {
+  border: 2px solid #212529;
   }
   .icons-sm {
     display: none;
