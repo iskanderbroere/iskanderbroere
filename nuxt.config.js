@@ -1,13 +1,3 @@
-const path = require("path")
-const PurgecssPlugin = require("purgecss-webpack-plugin")
-const glob = require("glob-all")
-
-class NuxtCssExtractor {
-  static extract(content) {
-    return content.match(/[A-z0-9-:/]+/g) || []
-  }
-}
-
 module.exports = {
   htmlAttrs: {
     lang: "en"
@@ -52,29 +42,6 @@ module.exports = {
   },
   loading: { color: "#0fcc83" },
   css: ["~/assets/css/main.css"],
-  build: {
-    extractCSS: true,
-    extend(config, { isDev }) {
-      if (!isDev) {
-        config.plugins.push(
-          new PurgecssPlugin({
-            paths: glob.sync([
-              path.join(__dirname, "./pages/**/*.vue"),
-              path.join(__dirname, "./components/**/*.vue"),
-              path.join(__dirname, "./layouts/**/*.vue")
-            ]),
-            extractors: [
-              {
-                extractor: NuxtCssExtractor,
-                extensions: ["vue"]
-              }
-            ],
-            whitelist: ["html", "body", "nuxt-progress"]
-          })
-        )
-      }
-    }
-  },
   render: {
     http2: { push: true },
     gzip: { threshold: 1 },
