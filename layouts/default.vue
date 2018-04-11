@@ -6,7 +6,7 @@
         <a
           href="https://www.linkedin.com/in/iskander-broere-51065615b/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           @click="toLinkedIn">
           <svg
             aria-labelledby="linkedin-icon"
@@ -20,7 +20,7 @@
         <a
           href="https://github.com/iskanderbroere/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           @click="toGithub">
           <svg
             aria-labelledby="github-icon"
@@ -41,7 +41,7 @@
       <a
         href="https://www.linkedin.com/in/iskander-broere-51065615b/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         @click="toLinkedIn">
         <svg
           aria-labelledby="linkedin-icon-small"
@@ -55,7 +55,7 @@
       <a
         href="https://github.com/iskanderbroere/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         @click="toGithub">
         <svg
           aria-labelledby="github-icon-small"

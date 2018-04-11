@@ -1,14 +1,24 @@
-module.exports = {
-  htmlAttrs: {
-    lang: "en"
-  },
-  mode: "universal",
+export default {
   head: {
     htmlAttrs: {
+      lang: "en",
       dir: "ltr"
     },
     title: "Iskander Broere - modern full-stack web applications",
-    meta: [{ name: "google", content: "nositelinkssearchbox" }]
+    meta: [
+      { charset: "utf-8" },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1, shrink-to-fit=no"
+      },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "JS - HTML - CSS - GraphQL - Vue.js - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications"
+      },
+      { name: "google", content: "nositelinkssearchbox" }
+    ]
   },
   modules: [
     "@nuxtjs/pwa",
@@ -26,7 +36,6 @@ module.exports = {
     generate: true
   },
   meta: {
-    viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
     name: "Iskander Broere - modern full-stack web applications",
     description:
       "JS - HTML - CSS - GraphQL - Vue.js - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications",
