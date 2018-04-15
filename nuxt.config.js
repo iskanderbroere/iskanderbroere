@@ -20,6 +20,7 @@ export default {
       { name: "google", content: "nositelinkssearchbox" }
     ]
   },
+  debug: true,
   modules: [
     "@nuxtjs/pwa",
     "@nuxtjs/sitemap",
@@ -57,6 +58,7 @@ export default {
     resourceHints: true
   },
   generate: {
+    fallback: true,
     minify: {
       collapseBooleanAttributes: true,
       collapseWhitespace: false,
