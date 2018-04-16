@@ -99,7 +99,7 @@ hr {
 .email, .projects, main a {
   font-weight: 700;
   box-shadow: 0 0 #0fcc83;
-  transition: color .2s, box-shadow .2s, text-shadow .2s;
+  transition: color .2s, box-shadow .2s;
 }
 .email {
   color: #0fcc83;
