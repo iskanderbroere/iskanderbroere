@@ -79,10 +79,11 @@ export default {
 .__nuxt-error-page a {
   color: #0fcc83;
   font-weight: 700;
+  box-shadow: 0 0 #0fcc83;
+  transition: color 0.2s, box-shadow 0.2s;
   line-height: 21px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  box-shadow: 0 0 #0fcc83;
   text-decoration: none;
 }
 .__nuxt-error-page a:hover,
