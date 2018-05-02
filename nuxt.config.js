@@ -16,11 +16,9 @@ export default {
         name: "description",
         content:
           "JS - HTML - CSS - GraphQL - Vue.js - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications"
-      },
-      { name: "google", content: "nositelinkssearchbox" }
+      }
     ]
   },
-  debug: true,
   modules: [
     "@nuxtjs/pwa",
     "@nuxtjs/sitemap",
@@ -30,7 +28,8 @@ export default {
         id: "UA-96952292-3"
       }
     ],
-    "./modules/headers.js"
+    "~/modules/headers",
+    "~/modules/image-transformator"
   ],
   sitemap: {
     hostname: "https://iskanderbroere.nl",
@@ -54,30 +53,9 @@ export default {
   css: ["~/assets/css/main.css"],
   render: {
     http2: { push: true },
-    gzip: { threshold: 1 },
     resourceHints: true
   },
   generate: {
-    fallback: true,
-    minify: {
-      collapseBooleanAttributes: true,
-      collapseWhitespace: false,
-      decodeEntities: true,
-      minifyCSS: true,
-      minifyJS: true,
-      processConditionalComments: true,
-      removeAttributeQuotes: false,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeOptionalTags: true,
-      removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: false,
-      removeTagWhitespace: false,
-      sortAttributes: true,
-      sortClassName: false,
-      trimCustomFragments: true,
-      useShortDoctype: true
-    }
+    fallback: true
   }
 }
