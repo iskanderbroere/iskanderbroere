@@ -17,7 +17,7 @@
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^2.0.8",
     "@nuxtjs/sitemap": "^0.1.1",
-    "nuxt-edge": "^2.0.0-25420924.8feeeb0"
+    "nuxt-edge": "^2.0.0-25440915.dcc92c6"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",

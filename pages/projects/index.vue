@@ -10,7 +10,7 @@
         <li>Jolien Wesselink - <a href="https://jolienwesselink.nl" rel="noopener noreferrer" target="_blank">jolienwesselink.nl</a> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4 - Markdown</small></li>
       </ul>
       <h3>In development</h3>
-      <ul style="margin-bottom: 0;">
+      <ul>
         <li>Vue.js Apollo GraphQL - <a href="https://github.com/iskanderbroere/gqvue" rel="noopener noreferrer" target="_blank">GitHub repository</a> - <small>Vue.js - Nuxt - Apollo GraphQL - GraphQL Yoga - Material Design</small></li>
         <li>Adonuxt - <a href="https://github.com/iskanderbroere/adonuxt" rel="noopener noreferrer" target="_blank">GitHub repository</a> - <small>Vue.js - Nuxt - AdonisJS - PostgreSQL - Material Design</small></li>
         <li>IPShares - <a href="https://github.com/IPSharesSam/IPShares" rel="noopener noreferrer" target="_blank">GitHub repository</a> - <small>React - Express - MongoDB - Heroku - Material Design</small></li>

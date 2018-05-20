@@ -11,10 +11,10 @@
 @font-face {
   font-family: "Work Sans";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   src: local("Work Sans Bold"), local("WorkSans-Bold"),
-    url("~/assets/fonts/work-sans-v3-latin-700.woff2") format("woff2"),
-    url("~/assets/fonts/work-sans-v3-latin-700.woff") format("woff");
+    url("~/assets/fonts/work-sans-v3-latin-600.woff2") format("woff2"),
+    url("~/assets/fonts/work-sans-v3-latin-600.woff") format("woff");
 }
 @font-face {
   font-family: "Josefin Sans";
@@ -45,6 +45,9 @@ body {
 }
 ul {
   padding-left: 20px;
+}
+ul:last-child {
+  margin-bottom: 0;
 }
 main {
   margin-top: 25px;
@@ -87,7 +90,7 @@ dt {
   font-family: "Josefin Sans", system-ui;
   font-weight: 700;
 }
-strong {
+h1 strong {
   font-weight: 700;
 }
 dl,
@@ -105,7 +108,7 @@ hr {
 .email,
 .projects,
 main a {
-  font-weight: 700;
+  font-weight: 600;
   box-shadow: 0 0 #0fcc83;
   transition: color 0.2s, box-shadow 0.2s;
 }
@@ -126,9 +129,9 @@ main a {
 .projects:focus,
 main a:hover,
 main a:focus {
-  font-weight: 700;
+  font-weight: 600;
   color: #0fcc83;
-  box-shadow: 0 4px #0fcc83;
+  box-shadow: 0 3px #0fcc83;
   text-decoration: none;
 }
 .green {
@@ -172,7 +175,7 @@ nav {
 }
 .icons-sm {
   display: flex;
-  align-content: center;
+  align-items: center;
   margin-top: 10px;
 }
 .icons {
