@@ -109,6 +109,7 @@ hr {
 .projects,
 main a {
   font-weight: 600;
+  padding-bottom: 2px;
   box-shadow: 0 0 #0fcc83;
   transition: color 0.2s, box-shadow 0.2s;
 }
@@ -130,6 +131,7 @@ main a {
 main a:hover,
 main a:focus {
   font-weight: 600;
+  padding-bottom: 2px;
   color: #0fcc83;
   box-shadow: 0 3px #0fcc83;
   text-decoration: none;
