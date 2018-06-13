@@ -125,11 +125,8 @@ main a {
   text-transform: uppercase;
 }
 .email:hover,
-.email:focus,
 .projects:hover,
-.projects:focus,
-main a:hover,
-main a:focus {
+main a:hover {
   font-weight: 600;
   padding-bottom: 2px;
   color: #0fcc83;
