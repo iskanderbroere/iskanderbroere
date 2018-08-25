@@ -20,7 +20,6 @@ export default {
     ]
   },
   modules: [
-    "@nuxtjs/pwa",
     "@nuxtjs/sitemap",
     [
       "@nuxtjs/google-analytics",
@@ -29,7 +28,7 @@ export default {
       }
     ],
     "~/modules/headers",
-    "~/modules/image-transformator"
+    "@nuxtjs/pwa"
   ],
   sitemap: {
     hostname: "https://iskanderbroere.nl",
