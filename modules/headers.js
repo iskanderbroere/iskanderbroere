@@ -22,18 +22,18 @@ const generateHeaderFile = ({ options }) => {
   files.forEach(file => {
     if (/workbox/.test(file) || /sw/.test(file)) {
       return
-    } else if (/.\.css$/.test(file)) {
+    }
+    if (/.\.css$/.test(file)) {
       _headers += `  Link: <${file.replace(
         generateDir,
         ""
       )}>; rel=preload; as=style\n`
       return
-    } else {
-      _headers += `  Link: <${file.replace(
-        generateDir,
-        ""
-      )}>; rel=preload; as=script\n`
     }
+    _headers += `  Link: <${file.replace(
+      generateDir,
+      ""
+    )}>; rel=preload; as=script\n`
   })
   fs.appendFileSync(`${generateDir}/_headers`, _headers)
   debug("_headers file generated")
