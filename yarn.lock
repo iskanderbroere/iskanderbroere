@@ -718,6 +718,10 @@
     "@nuxtjs/meta" "^2.3.2"
     "@nuxtjs/workbox" "^2.3.2"
 
+"@nuxtjs/pwa@https://github.com/nuxt-community/pwa-module#develop":
+  version "0.0.0"
+  resolved "https://github.com/nuxt-community/pwa-module#7a8bb3bf0469093b3f57a75d2a934860edee4fbf"
+
 "@nuxtjs/sitemap@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-0.1.1.tgz#25031515289e506aa8d3decc33e31569bb023a95"
@@ -4288,9 +4292,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-edge@^2.0.0-25586506.608b913:
-  version "2.0.0-25586506.608b913"
-  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25586506.608b913.tgz#3caba049a511b508464cc5359fdc696b0c31566e"
+nuxt-edge@^2.0.0-25586998.83d9dc4:
+  version "2.0.0-25586998.83d9dc4"
+  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25586998.83d9dc4.tgz#c2998aad1caa4251a96c54235e115e99d29e8c13"
   dependencies:
     "@babel/core" "7.0.0-rc.2"
     "@nuxtjs/babel-preset-app" "0.4.0"
