@@ -27,7 +27,6 @@ export default {
         id: "UA-96952292-3"
       }
     ],
-    "~/modules/headers",
     "@nuxtjs/pwa"
   ],
   sitemap: {
