@@ -52,7 +52,8 @@ export default {
   css: ["~/assets/css/main.css"],
   render: {
     http2: { push: true },
-    resourceHints: true
+    resourceHints: true,
+    csp: true
   },
   generate: {
     fallback: true
