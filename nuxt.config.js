@@ -52,7 +52,10 @@ export default {
   render: {
     http2: { push: true },
     resourceHints: true,
-    csp: true
+    csp: {
+      hashAlgorithm: "sha256",
+      allowedSources: "https://www.google-analytics.com/analytics.js"
+    }
   },
   generate: {
     fallback: true
