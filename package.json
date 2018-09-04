@@ -15,14 +15,14 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
-    "@nuxtjs/pwa": "^2.4.0",
+    "@nuxtjs/pwa": "^2.5.0",
     "@nuxtjs/sitemap": "^0.1.1",
-    "nuxt-edge": "^2.0.0-25586998.83d9dc4"
+    "nuxt-edge": "^2.0.0-25599455.3a0f094"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
     "consola": "^1.4.3",
-    "eslint": "^5.4.0",
+    "eslint": "^5.5.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-prettier": "^2.6.2",
