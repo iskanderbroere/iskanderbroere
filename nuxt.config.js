@@ -48,7 +48,7 @@ export default {
     background_color: '#f9f9f9'
   },
   loading: { color: '#0fcc83' },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/bootstrap-reboot.css'],
   render: {
     http2: { push: true },
     resourceHints: true,
