@@ -1,0 +1,110 @@
+<template>
+  <a
+    v-if="external"
+    :class="classNames"
+    :href="to"
+    :target="external ? '_blank' : false"
+    rel="noopener noreferrer"
+    @click="trackLink"
+    @keyup.enter="trackLink">
+    <slot />
+  </a>
+  <nuxt-link
+    v-else
+    :to="to"
+    :class="classNames">
+    <slot/>
+  </nuxt-link>
+
+</template>
+
+<script>
+export default {
+  name: 'ILink',
+  props: {
+    to: {
+      type: String,
+      required: true
+    },
+    external: {
+      type: Boolean,
+      default: () => false
+    },
+    important: {
+      type: Boolean,
+      default: () => false
+    },
+    iconLink: {
+      type: Boolean,
+      default: () => false
+    }
+  },
+  computed: {
+    classNames() {
+      const {
+        // props
+        iconLink,
+        important,
+        // css module props (alias where neccessary)
+        $style: { link, important: importantClass, 'icon-link': iconLinkClass, 'text-link': textLink }
+      } = this
+      return [
+        link,
+        {
+          [textLink]: !iconLink,
+          [importantClass]: important,
+          [iconLinkClass]: iconLink
+        }
+      ]
+    }
+  },
+  methods: {
+    trackLink() {
+      this.$ga.event('External links', 'click', this.to)
+    }
+  }
+}
+</script>
+
+<style module>
+/* bootstrap resets */
+.link:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+.link:not([href]):not([tabindex]):hover,
+.link:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+.link:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+/* end bootstrap resets */
+.text-link {
+  color: #212529;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+.text-link:hover {
+  color: #0fcc83;
+}
+.important {
+  color: #0fcc83;
+}
+.important:hover {
+  color: #18865c;
+}
+.icon-link > svg {
+  display: flex;
+  fill: #212529;
+  width: 30px;
+  height: 30px;
+  transition: fill 0.2s ease-in-out;
+}
+.icon-link:hover > svg {
+  fill: #0fcc83;
+}
+</style>

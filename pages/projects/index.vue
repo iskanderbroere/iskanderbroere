@@ -3,28 +3,30 @@
     <section>
       <h2>Projects</h2>
       <h3>In production</h3>
-      <unordered-list list-style="none">
+      <i-unordered-list list-style="none">
         <li>Personal website - <small>Vue.js - Nuxt - Netlify - SSR - PostCSS</small></li>
-        <li>DepoClaim - <a href="https://depoclaim.com" rel="noopener noreferrer" target="_blank">DepoClaim.com</a> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4 - Markdown</small></li>
-        <li>M&aacute;ty&aacute;s Bittenbinder - <a href="https://mbittenbinder.com" rel="noopener noreferrer" target="_blank">mbittenbinder.com</a> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4</small></li>
-        <li>Jolien Wesselink - <a href="https://jolienwesselink.nl" rel="noopener noreferrer" target="_blank">jolienwesselink.nl</a> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4 - Markdown</small></li>
-      </unordered-list>
+        <li>DepoClaim - <i-link to="https://depoclaim.com" external>DepoClaim.com</i-link> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4 - Markdown</small></li>
+        <li>M&aacute;ty&aacute;s Bittenbinder - <i-link to="https://mbittenbinder.com" external>mbittenbinder.com</i-link> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4</small></li>
+        <li>Jolien Wesselink - <i-link to="https://jolienwesselink.nl" external>jolienwesselink.nl</i-link> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4 - Markdown</small></li>
+      </i-unordered-list>
       <h3>In development</h3>
-      <unordered-list>
-        <li>Vue.js Apollo GraphQL - <a href="https://github.com/iskanderbroere/gqvue" rel="noopener noreferrer" target="_blank">GitHub repository</a> - <small>Vue.js - Nuxt - Apollo GraphQL - GraphQL Yoga - Material Design</small></li>
-        <li>Adonuxt - <a href="https://github.com/iskanderbroere/adonuxt" rel="noopener noreferrer" target="_blank">GitHub repository</a> - <small>Vue.js - Nuxt - AdonisJS - PostgreSQL - Material Design</small></li>
-        <li>IPShares - <a href="https://github.com/IPSharesSam/IPShares" rel="noopener noreferrer" target="_blank">GitHub repository</a> - <small>React - Express - MongoDB - Heroku - Material Design</small></li>
-      </unordered-list>
+      <i-unordered-list>
+        <li>Vue.js Apollo GraphQL - <i-link to="https://github.com/iskanderbroere/gqvue" external>GitHub repository</i-link> - <small>Vue.js - Nuxt - Apollo GraphQL - GraphQL Yoga - Material Design</small></li>
+        <li>Adonuxt - <i-link to="https://github.com/iskanderbroere/adonuxt" external>GitHub repository</i-link> - <small>Vue.js - Nuxt - AdonisJS - PostgreSQL - Material Design</small></li>
+        <li>IPShares - <i-link to="https://github.com/IPSharesSam/IPShares" external>GitHub repository</i-link>  - <small>React - Express - MongoDB - Heroku - Material Design</small></li>
+      </i-unordered-list>
     </section>
   </main>
 </template>
 
 <script>
-import UnorderedList from "~/components/UnorderedList"
+import IUnorderedList from '~/components/IUnorderedList'
+import ILink from '~/components/ILink'
 
 export default {
   components: {
-    UnorderedList
+    IUnorderedList,
+    ILink
   }
 }
 </script>
