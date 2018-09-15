@@ -52,6 +52,7 @@ export default {
 </script>
 
 <style>
+@import url('https://use.typekit.net/wke4nyp.css');
 html {
   font-size: 16px;
 }
@@ -61,7 +62,7 @@ html {
   }
 }
 body {
-  font-family: 'Skolar Sans Latin', system-ui;
+  font-family: 'skolar-sans-latin', system-ui;
   font-weight: 400;
   background-color: #f9f9f9;
 }

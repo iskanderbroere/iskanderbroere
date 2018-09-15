@@ -85,7 +85,7 @@ export default {
   color: #212529;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  font-weight: 600;
+  font-weight: 700;
   transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
 }
 .text-link:hover {
