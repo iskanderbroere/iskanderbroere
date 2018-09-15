@@ -1,61 +1,64 @@
 export default {
   head: {
     htmlAttrs: {
-      lang: "en",
-      dir: "ltr"
+      lang: 'en',
+      dir: 'ltr'
     },
-    title: "Iskander Broere - modern full-stack web applications",
+    title: 'Iskander Broere - modern full-stack web applications',
     meta: [
-      { charset: "utf-8" },
+      { charset: 'utf-8' },
       {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1, shrink-to-fit=no"
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
       },
       {
-        hid: "description",
-        name: "description",
+        hid: 'description',
+        name: 'description',
         content:
-          "JS - HTML - CSS - GraphQL - Vue.js - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications"
+          'I write modern front-end web applications @ Frontmen, am eager to learn, always seeking to improve, perfectionistic yet practical'
       }
     ]
   },
   modules: [
-    "@nuxtjs/sitemap",
+    '@nuxtjs/sitemap',
     [
-      "@nuxtjs/google-analytics",
+      '@nuxtjs/google-analytics',
       {
-        id: "UA-96952292-3"
+        id: 'UA-96952292-3'
       }
     ],
-    "@nuxtjs/pwa"
+    '@nuxtjs/pwa'
   ],
   sitemap: {
-    hostname: "https://iskanderbroere.nl",
+    hostname: 'https://iskanderbroere.nl',
     generate: true
   },
   meta: {
-    name: "Iskander Broere - modern full-stack web applications",
+    name: 'Iskander Broere - modern full-stack web applications',
     description:
-      "JS - HTML - CSS - GraphQL - Vue.js - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications",
-    lang: "en",
+      'I write modern front-end web applications @ Frontmen, am eager to learn, always seeking to improve, perfectionistic yet practical',
+    lang: 'en',
     mobileApp: false
   },
   manifest: {
-    name: "Iskander Broere - modern full-stack web applications",
-    short_name: "I. Broere",
+    name: 'Iskander Broere - modern full-stack web applications',
+    short_name: 'I. Broere',
     description:
-      "JS - HTML - CSS - GraphQL - Vue.js - React - Express - Bootstrap 4 - Webpack - Yarn - NPM - Netlify - PWAs - CI - Static Hosting - Decoupled Applications",
-    background_color: "#f9f9f9"
+      'I write modern front-end web applications @ Frontmen, am eager to learn, always seeking to improve, perfectionistic yet practical',
+    background_color: '#f9f9f9'
   },
-  loading: { color: "#0fcc83" },
-  css: ["~/assets/css/main.css"],
+  loading: { color: '#0fcc83' },
+  css: ['~/assets/css/main.css'],
   render: {
     http2: { push: true },
     resourceHints: true,
-    csp: {
-      hashAlgorithm: "sha256",
-      allowedSources: "https://www.google-analytics.com/analytics.js"
-    }
+    csp:
+      process.env.NODE_ENV === 'production'
+        ? {
+            hashAlgorithm: 'sha256',
+            allowedSources: 'https://www.google-analytics.com/analytics.js'
+          }
+        : false
   },
   generate: {
     fallback: true
