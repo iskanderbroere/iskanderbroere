@@ -37,6 +37,10 @@ export default {
     iconLink: {
       type: Boolean,
       default: () => false
+    },
+    navLink: {
+      type: Boolean,
+      default: () => false
     }
   },
   computed: {
@@ -44,15 +48,23 @@ export default {
       const {
         // props
         iconLink,
+        navLink,
         important,
         // css module props (alias where neccessary)
-        $style: { link, important: importantClass, 'icon-link': iconLinkClass, 'text-link': textLink }
+        $style: {
+          link,
+          important: importantClass,
+          'icon-link': iconLinkClass,
+          'nav-link': navLinkClass,
+          'text-link': textLink
+        }
       } = this
       return [
         link,
         {
           [textLink]: !iconLink,
           [importantClass]: important,
+          [navLinkClass]: navLink,
           [iconLinkClass]: iconLink
         }
       ]
@@ -81,14 +93,16 @@ export default {
   outline: 0;
 }
 /* end bootstrap resets */
-.text-link {
+.text-link,
+.text-link > * {
   color: #212529;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   font-weight: 700;
   transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
 }
-.text-link:hover {
+.text-link:hover,
+.text-link:hover > * {
   color: #0fcc83;
 }
 .important {
@@ -106,5 +120,8 @@ export default {
 }
 .icon-link:hover > svg {
   fill: #0fcc83;
+}
+.nav-link {
+  text-transform: uppercase;
 }
 </style>

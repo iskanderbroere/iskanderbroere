@@ -1,7 +1,7 @@
 <template>
   <i-container>
     <nav :class="$style.nav">
-      <h1>iskanderbroere</h1>
+      <h1 :class="$style.navtitle">iskanderbroere</h1>
       <div :class="$style.navicons">
         <i-link to="https://www.linkedin.com/in/iskander-broere-51065615b/" icon-link external>
           <i-icon accessibility-name="linkedin-icon">
@@ -13,8 +13,8 @@
             <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
           </i-icon>
         </i-link>
-        <i-link v-if="this.$route.path !== '/'" to="/">Home</i-link>
-        <i-link v-if="this.$route.path !== '/projects'" to="/projects">Projects</i-link>
+        <i-link v-if="this.$route.path !== '/'" to="/" nav-link>Home</i-link>
+        <i-link v-if="this.$route.path !== '/projects'" to="/projects" nav-link>Projects</i-link>
       </div>
     </nav>
     <nuxt :class="$style['footer-margin']" />
@@ -30,8 +30,8 @@
             <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
           </i-icon>
         </i-link>
-        <i-link v-if="this.$route.path !== '/'" to="/">Home</i-link>
-        <i-link v-if="this.$route.path !== '/projects'" to="/projects">Projects</i-link>
+        <i-link v-if="this.$route.path !== '/'" to="/" nav-link>Home</i-link>
+        <i-link v-if="this.$route.path !== '/projects'" to="/projects" nav-link>Projects</i-link>
       </nav>
     </footer>
   </i-container>
@@ -52,8 +52,45 @@ export default {
 </script>
 
 <style>
+/* bootstrap resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+[tabindex='-1']:focus {
+  outline: 0 !important;
+}
+small {
+  font-size: 80%;
+}
+/* grayscale img if no alt tag */
+img:not([alt]) {
+  filter: grayscale(100%);
+}
+/* bootstrap resets end */
 html {
   font-size: 16px;
+  /* bootstrap resets */
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+  /* bootstrap resets end */
 }
 @media (min-width: 1200px) {
   html {
@@ -62,8 +99,16 @@ html {
 }
 body {
   font-family: 'skolar-sans-latin', system-ui;
+  color: #212529;
   font-weight: 400;
   background-color: #f9f9f9;
+  /* bootstrap resets */
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  /* bootstrap resets end */
 }
 h1,
 h2,
@@ -72,6 +117,9 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  /* bootstrap resets */
+  margin-top: 0;
+  margin-bottom: 0;
 }
 h1 {
   font-size: 2.5rem;
@@ -82,11 +130,20 @@ h2 {
 h3 {
   font-size: 1.2rem;
 }
-p,
-address,
-h2,
-h3 {
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+address {
   margin-bottom: 0;
+  /* bootstrap resets */
+  font-style: normal;
+  line-height: inherit;
 }
 </style>
 
@@ -99,6 +156,10 @@ h3 {
   padding: 10px 0;
   margin-bottom: 10px;
   border-bottom: 2px dotted #6b6f6d;
+}
+.navtitle {
+  line-height: 1;
+  padding-bottom: 0.833rem;
 }
 .navicons a:not(:last-child) {
   margin-right: 18px;
