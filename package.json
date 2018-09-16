@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "personal website",
   "author": "Iskander Broere",
-  "private": true,
   "browserslist": [
-    "> 5%",
+    "> 1%",
     "not ie <= 10"
   ],
   "engines": {
