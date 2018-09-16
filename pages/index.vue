@@ -1,26 +1,32 @@
 <template>
   <main>
-    <section>
-      <h2>hi, we're in an <span class="green">elevator</span>, this is my <span class="green">pitch</span>, i</h2>
-      <h3>write</h3>
-      <p>modern front-end web applications @
-        <i-link
-          to="https://frontmen.nl"
-          external
-          important>
-          Frontmen
-        </i-link>
-      </p>
-      <h3>use</h3>
-      <i-unordered-list><li v-for="item in useList" :class="$style.listitem" :key="item">{{ item }}</li></i-unordered-list>
-      <h3>like</h3>
-      <i-unordered-list><li v-for="item in likeList" :class="$style.listitem" :key="item">{{ item }}</li></i-unordered-list>
-      <i-hr/>
-      <p><em>Eager to learn, always seeking to improve, perfectionistic yet practical, that is who I am.</em> Still reading? Hit me up! </p>
-      <address>
-        <i-link to="mailto:iskanderbroere@gmail.com" important>iskanderbroere@gmail.com</i-link>
-      </address>
-    </section>
+    <h2>hi, we're in an <em>elevator</em>, this is my <em>pitch</em>, i</h2>
+    <h3>write</h3>
+    <p>modern front-end web applications @
+      <i-link
+        to="https://frontmen.nl"
+        external
+        important>
+        Frontmen
+      </i-link>
+    </p>
+    <h3>use</h3>
+    <i-unordered-list :items="useList" inline>
+      <template slot-scope="{ item }">
+        {{ item }}
+      </template>
+    </i-unordered-list>
+    <h3>like</h3>
+    <i-unordered-list :items="likeList" inline>
+      <template slot-scope="{ item }">
+        {{ item }}
+      </template>
+    </i-unordered-list>
+    <i-hr/>
+    <p><em>Eager to learn, always seeking to improve, perfectionistic yet practical, that is who I am.</em> Still reading? Hit me up! </p>
+    <address>
+      <i-link to="mailto:iskanderbroere@gmail.com" important>iskanderbroere@gmail.com</i-link>
+    </address>
   </main>
 </template>
 
@@ -74,12 +80,3 @@ export default {
   }
 }
 </script>
-
-<style module>
-.listitem:not(:last-child)::after {
-  content: ' - ';
-}
-.listitem {
-  display: inline;
-}
-</style>

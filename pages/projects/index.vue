@@ -1,32 +1,67 @@
 <template>
   <main>
-    <section>
-      <h2>Projects</h2>
-      <h3>In production</h3>
-      <i-unordered-list list-style="none">
-        <li>Personal website - <small>Vue.js - Nuxt - Netlify - SSR - PostCSS</small></li>
-        <li>DepoClaim - <i-link to="https://depoclaim.com" external>DepoClaim.com</i-link> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4 - Markdown</small></li>
-        <li>M&aacute;ty&aacute;s Bittenbinder - <i-link to="https://mbittenbinder.com" external>mbittenbinder.com</i-link> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4</small></li>
-        <li>Jolien Wesselink - <i-link to="https://jolienwesselink.nl" external>jolienwesselink.nl</i-link> - <small>Vue.js - Nuxt - Netlify - SSR - Contentful - Bootstrap 4 - Markdown</small></li>
-      </i-unordered-list>
-      <h3>In development</h3>
-      <i-unordered-list>
-        <li>Vue.js Apollo GraphQL - <i-link to="https://github.com/iskanderbroere/gqvue" external>GitHub repository</i-link> - <small>Vue.js - Nuxt - Apollo GraphQL - GraphQL Yoga - Material Design</small></li>
-        <li>Adonuxt - <i-link to="https://github.com/iskanderbroere/adonuxt" external>GitHub repository</i-link> - <small>Vue.js - Nuxt - AdonisJS - PostgreSQL - Material Design</small></li>
-        <li>IPShares - <i-link to="https://github.com/IPSharesSam/IPShares" external>GitHub repository</i-link>  - <small>React - Express - MongoDB - Heroku - Material Design</small></li>
-      </i-unordered-list>
-    </section>
+    <h2>Projects</h2>
+    <h3 v-if="prodProjects.length > 0">In production</h3>
+    <i-unordered-list :items="prodProjects" item-key="name">
+      <template slot-scope="{ item: { name, link = null, tags } }">
+        <h4 v-if="link" ><i-link :to="link" external>{{ name }}</i-link></h4>
+        <h4 v-else>{{ name }}</h4>
+        <i-unordered-list :items="tags" inline>
+          <template slot-scope="{ item }">
+            {{ item }}
+          </template>
+        </i-unordered-list>
+      </template>
+    </i-unordered-list>
+    <h3 v-if="devProjects.length > 0">In development</h3>
+    <i-unordered-list :items="devProjects" item-key="name">
+      <template slot-scope="{ item: { name, link = null, tags } }">
+        <h4 v-if="link" ><i-link :to="link" external>{{ name }}</i-link></h4>
+        <h4 v-else>{{ name }}</h4>
+        <i-unordered-list :items="tags" inline>
+          <template slot-scope="{ item }">
+            {{ item }}
+          </template>
+        </i-unordered-list>
+      </template>
+    </i-unordered-list>
   </main>
 </template>
 
 <script>
 import IUnorderedList from '~/components/IUnorderedList'
+import IListItem from '~/components/IListItem'
 import ILink from '~/components/ILink'
 
 export default {
   components: {
     IUnorderedList,
+    IListItem,
     ILink
+  },
+  created() {
+    this.prodProjects = [
+      {
+        name: 'Personal website',
+        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'PostCSS']
+      },
+      {
+        name: 'Depoclaim',
+        link: 'https://depoclaim.com',
+        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4', 'Markdown']
+      },
+      {
+        name: 'Màtyàs Bittenbinder',
+        link: 'https://mbittenbinder.com',
+        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4']
+      },
+      {
+        name: 'Jolien Wesselink',
+        link: 'https://jolienwesselink.nl',
+        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4', 'Markdown']
+      }
+    ]
+    this.devProjects = []
   }
 }
 </script>
