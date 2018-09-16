@@ -14,7 +14,7 @@
 @media (min-width: 768px) {
   .container {
     padding: 0;
-    max-width: 720px;
+    max-width: 600px;
   }
 }
 </style>
