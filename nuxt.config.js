@@ -17,7 +17,8 @@ export default {
         content:
           'I write modern front-end web applications @ Frontmen, am eager to learn, always seeking to improve, perfectionistic yet practical'
       }
-    ]
+    ],
+    link: [{ rel: 'stylesheet', href: 'https://use.typekit.net/wke4nyp.css' }]
   },
   modules: [
     '@nuxtjs/sitemap',

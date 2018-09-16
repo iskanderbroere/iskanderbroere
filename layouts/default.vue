@@ -52,7 +52,6 @@ export default {
 </script>
 
 <style>
-@import url('https://use.typekit.net/wke4nyp.css');
 html {
   font-size: 16px;
 }
