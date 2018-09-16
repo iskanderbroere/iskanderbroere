@@ -23,11 +23,11 @@ section {
 small {
   font-size: 80%;
 }
+/* bootstrap resets end */
 /* grayscale img if no alt tag */
 img:not([alt]) {
   filter: grayscale(100%);
 }
-/* bootstrap resets end */
 html {
   font-size: 16px;
   /* bootstrap resets */
@@ -81,8 +81,7 @@ h4 {
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 address {
