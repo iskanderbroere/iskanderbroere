@@ -1,6 +1,10 @@
 <template>
   <ul :class="[$style.ul, { [$style.unstyled] : listStyle === 'none' }]">
-    <i-list-item v-for="item in items" :key="itemKey ? item[itemKey] : item" :inline="inline">
+    <i-list-item
+      v-for="item in items"
+      :class="itemClass"
+      :key="itemKey ? item[itemKey] : item"
+      :inline="inline">
       <slot :item="item">
         {{ item.length ? item : JSON.stringify(item) }}
       </slot>
@@ -28,11 +32,15 @@ export default {
     },
     itemKey: {
       type: [String, Boolean],
-      default: () => false
+      default: false
     },
     inline: {
       type: Boolean,
-      default: () => false
+      default: false
+    },
+    itemClass: {
+      type: String,
+      default: () => null
     }
   }
 }
