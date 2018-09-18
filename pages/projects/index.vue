@@ -1,23 +1,10 @@
 <template>
   <main>
     <h2>Projects</h2>
-    <h3 v-if="prodProjects.length > 0">In production</h3>
     <i-unordered-list :items="prodProjects" item-key="name">
       <template slot-scope="{ item: { name, link = null, tags } }">
-        <h4 v-if="link" ><i-link :to="link" external>{{ name }}</i-link></h4>
-        <h4 v-else>{{ name }}</h4>
-        <i-unordered-list :items="tags" inline>
-          <template slot-scope="{ item }">
-            {{ item }}
-          </template>
-        </i-unordered-list>
-      </template>
-    </i-unordered-list>
-    <h3 v-if="devProjects.length > 0">In development</h3>
-    <i-unordered-list :items="devProjects" item-key="name">
-      <template slot-scope="{ item: { name, link = null, tags } }">
-        <h4 v-if="link" ><i-link :to="link" external>{{ name }}</i-link></h4>
-        <h4 v-else>{{ name }}</h4>
+        <h3 v-if="link" ><i-link :to="link" external>{{ name }}</i-link></h3>
+        <h3 v-else>{{ name }}</h3>
         <i-unordered-list :items="tags" inline>
           <template slot-scope="{ item }">
             {{ item }}
@@ -51,7 +38,7 @@ export default {
         tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4', 'Markdown']
       },
       {
-        name: 'Màtyàs Bittenbinder',
+        name: 'Mátyás Bittenbinder',
         link: 'https://mbittenbinder.com',
         tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4']
       },
@@ -61,7 +48,6 @@ export default {
         tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4', 'Markdown']
       }
     ]
-    this.devProjects = []
   }
 }
 </script>
