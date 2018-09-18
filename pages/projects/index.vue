@@ -27,6 +27,8 @@ export default {
     ILink
   },
   created() {
+    // set non reactive static data
+    // https://github.com/vuejs/vue/issues/6004
     this.prodProjects = [
       {
         name: 'Personal website',
