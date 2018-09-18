@@ -10,7 +10,7 @@ export default {
   props: {
     inline: {
       type: Boolean,
-      default: () => false
+      default: false
     }
   }
 }
@@ -18,7 +18,7 @@ export default {
 
 <style module>
 .list-item-inline:not(:last-child)::after {
-  content: ' - ';
+  content: ' – ';
 }
 .list-item-inline {
   display: inline;
