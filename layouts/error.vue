@@ -77,9 +77,9 @@ export default {
   margin-bottom: 8px;
 }
 .__nuxt-error-page a {
-  color: #0fcc83;
+  color: var(--bright-green);
   font-weight: 700;
-  box-shadow: 0 0 #0fcc83;
+  box-shadow: 0 0 var(--bright-green);
   transition: color 0.2s, box-shadow 0.2s;
   line-height: 21px;
   margin-bottom: 10px;
@@ -89,8 +89,8 @@ export default {
 .__nuxt-error-page a:hover,
 .__nuxt-error-page a:focus {
   font-weight: 700;
-  color: #0fcc83;
-  box-shadow: 0 4px #0fcc83;
+  color: var(--bright-green);
+  box-shadow: 0 4px var(--bright-green);
   text-decoration: none;
 }
 </style>
