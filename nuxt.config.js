@@ -48,7 +48,8 @@ export default {
       'I write modern front-end web applications @ Frontmen, am eager to learn, always seeking to improve, perfectionistic yet practical',
     background_color: '#f9f9f9'
   },
-  loading: { color: '#0fcc83' },
+  // loading: { color: 'var(--bright-green)' },
+  loading: false,
   css: ['~/assets/css/main.css'],
   render: {
     http2: { push: true },
