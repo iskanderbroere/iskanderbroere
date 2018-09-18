@@ -2,7 +2,6 @@
   <ul :class="[$style.ul, { [$style.unstyled] : listStyle === 'none' }]">
     <i-list-item
       v-for="item in items"
-      :class="itemClass"
       :key="itemKey ? item[itemKey] : item"
       :inline="inline">
       <slot :item="item">
@@ -37,10 +36,6 @@ export default {
     inline: {
       type: Boolean,
       default: false
-    },
-    itemClass: {
-      type: String,
-      default: () => null
     }
   }
 }
