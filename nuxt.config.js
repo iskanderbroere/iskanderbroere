@@ -53,14 +53,7 @@ export default {
   css: ['~/assets/css/main.css'],
   render: {
     http2: { push: true },
-    resourceHints: true,
-    csp:
-      process.env.NODE_ENV === 'production'
-        ? {
-            hashAlgorithm: 'sha256',
-            allowedSources: 'https://www.google-analytics.com/analytics.js'
-          }
-        : false
+    resourceHints: true
   },
   generate: {
     fallback: true
