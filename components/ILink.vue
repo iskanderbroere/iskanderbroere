@@ -28,19 +28,19 @@ export default {
     },
     external: {
       type: Boolean,
-      default: () => false
+      default: false
     },
     important: {
       type: Boolean,
-      default: () => false
+      default: false
     },
     iconLink: {
       type: Boolean,
-      default: () => false
+      default: false
     },
     navLink: {
       type: Boolean,
-      default: () => false
+      default: false
     }
   },
   computed: {
@@ -103,13 +103,13 @@ export default {
 }
 .text-link:hover,
 .text-link:hover > * {
-  color: #0fcc83;
+  color: var(--bright-green);
 }
 .important {
-  color: #0fcc83;
+  color: var(--bright-green);
 }
 .important:hover {
-  color: #18865c;
+  color: var(--dark-green);
 }
 .icon-link > svg {
   display: flex;
@@ -119,7 +119,7 @@ export default {
   transition: fill 0.2s ease-in-out;
 }
 .icon-link:hover > svg {
-  fill: #0fcc83;
+  fill: var(--bright-green);
 }
 .nav-link {
   text-transform: uppercase;
