@@ -5,7 +5,7 @@
 /_nuxt/:placeholder.js
   Cache-Control: public, max-age=31536000, immutable
   X-Content-Type-Options: nosniff
-/*/:placeholder.html
+/:placeholder.html
   X-Content-Type-Options: nosniff
 /*/:placeholder.txt
   X-Content-Type-Options: nosniff
