@@ -26,7 +26,9 @@ export default {
     IListItem,
     ILink
   },
-  head: () => ({ title: 'Projects' }),
+  head: () => ({
+    title: 'Projects'
+  }),
   created() {
     // set non reactive static data
     // https://github.com/vuejs/vue/issues/6004

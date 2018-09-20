@@ -47,6 +47,11 @@ export default {
     IContainer,
     ILink,
     IIcon
+  },
+  head() {
+    return {
+      link: [{ rel: 'canonical', href: `https://iskanderbroere.nl${this.$route.path}` }]
+    }
   }
 }
 </script>
