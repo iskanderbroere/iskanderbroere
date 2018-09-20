@@ -1,7 +1,15 @@
 :root {
   --bright-green: #0fcc83;
   --dark-green: #18865c;
+  --dark-gray: #212529;
+  --light-gray: #f9f9f9;
+  --gray: #6b6f6d;
 }
+/*
+ * nuxt page transitions
+ * https://vuejs.org/v2/guide/transitions.html
+ *
+*/
 .page-enter-active,
 .page-leave-active {
   transition: all 0.3s ease-in-out;
@@ -28,9 +36,9 @@ html {
 }
 body {
   font-family: 'skolar-sans-latin', system-ui;
-  color: #212529;
+  color: var(--dark-gray);
   font-weight: 400;
-  background-color: #f9f9f9;
+  background-color: var(--light-gray);
   /* bootstrap resets */
   margin: 0;
   font-size: 1rem;

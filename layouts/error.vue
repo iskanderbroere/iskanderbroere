@@ -53,8 +53,8 @@ export default {
 <style>
 .__nuxt-error-page {
   padding: 1rem;
-  background: #f9f9f9;
-  color: #47494e;
+  background: var(--light-gray);
+  color: var(--gray);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -73,7 +73,7 @@ export default {
 }
 .__nuxt-error-page .title {
   font-size: 1.5rem;
-  color: #47494e;
+  color: var(--gray);
   margin-bottom: 8px;
 }
 .__nuxt-error-page a {

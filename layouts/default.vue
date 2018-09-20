@@ -59,7 +59,7 @@ export default {
   justify-content: space-between;
   padding: 10px 0;
   margin-bottom: 10px;
-  border-bottom: 2px dotted #6b6f6d;
+  border-bottom: 2px dotted var(--gray);
 }
 .navtitle {
   line-height: 1;
@@ -78,8 +78,8 @@ export default {
   position: fixed;
   bottom: 0;
   width: calc(100% - 30px);
-  background-color: #f9f9f9;
-  border-top: 2px dotted #6b6f6d;
+  background-color: var(--light-gray);
+  border-top: 2px dotted var(--gray);
   display: flex;
   align-items: center;
   height: 60px;

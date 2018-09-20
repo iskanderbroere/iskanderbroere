@@ -95,7 +95,7 @@ export default {
 /* end bootstrap resets */
 .text-link,
 .text-link > * {
-  color: #212529;
+  color: var(--dark-gray);
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   font-weight: 700;
@@ -113,7 +113,7 @@ export default {
 }
 .icon-link > svg {
   display: flex;
-  fill: #212529;
+  fill: var(--dark-gray);
   width: 30px;
   height: 30px;
   transition: fill 0.2s ease-in-out;
