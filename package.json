@@ -4,8 +4,8 @@
   "description": "personal website",
   "author": "Iskander Broere",
   "browserslist": [
-    "> 1%",
-    "not ie <= 10"
+    "cover 99.5% in NL",
+    "not ie <= 9"
   ],
   "engines": {
     "node": "8.x.x"
@@ -14,6 +14,7 @@
     "cypress": "cypress open",
     "dev": "nuxt",
     "generate": "nuxt generate",
+    "build": "nuxt build",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"

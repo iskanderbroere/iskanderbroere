@@ -31,9 +31,9 @@
 </template>
 
 <script>
-import ILink from '~/components/ILink'
-import IUnorderedList from '~/components/IUnorderedList'
-import IHr from '~/components/IHorizontalRule'
+import ILink from "~/components/ILink"
+import IUnorderedList from "~/components/IUnorderedList"
+import IHr from "~/components/IHorizontalRule"
 
 export default {
   components: {
@@ -43,39 +43,39 @@ export default {
   },
   created() {
     this.useList = [
-      'JavaScript',
-      'HTML',
-      'CSS',
-      'GraphQL',
-      'Markdown',
-      'MongoDB',
-      'PostgreSQL',
-      'Vue.js 💚',
-      'React',
-      'Express',
-      'PostCSS',
-      'SCSS',
-      'CSSinJS',
-      'Material Design',
-      'Bootstrap 4',
-      'Apollo GraphQL ⭐',
-      'Webpack',
-      'Yarn',
-      'NPM',
-      'Prettier',
-      'ESLint',
-      'Stylelint',
-      'VSCode',
-      'Netlify',
-      'GitHub'
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "GraphQL",
+      "Markdown",
+      "MongoDB",
+      "PostgreSQL",
+      "Vue.js 💚",
+      "React",
+      "Express",
+      "PostCSS",
+      "SCSS",
+      "CSSinJS",
+      "Material Design",
+      "Bootstrap 4",
+      "Apollo GraphQL ⭐",
+      "Webpack",
+      "Yarn",
+      "NPM",
+      "Prettier",
+      "ESLint",
+      "Stylelint",
+      "VSCode",
+      "Netlify",
+      "GitHub"
     ]
     this.likeList = [
-      'Performance 🚀',
-      'PWAs',
-      'CI',
-      'Static site generators',
-      'Decoupled applications',
-      'Serverless functions'
+      "Performance 🚀",
+      "PWAs",
+      "CI",
+      "Static site generators",
+      "Decoupled applications",
+      "Serverless functions"
     ]
   }
 }

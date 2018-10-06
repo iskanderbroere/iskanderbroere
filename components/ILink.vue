@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'ILink',
+  name: "ILink",
   props: {
     to: {
       type: String,
@@ -54,9 +54,9 @@ export default {
         $style: {
           link,
           important: importantClass,
-          'icon-link': iconLinkClass,
-          'nav-link': navLinkClass,
-          'text-link': textLink
+          "icon-link": iconLinkClass,
+          "nav-link": navLinkClass,
+          "text-link": textLink
         }
       } = this
       return [
@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     trackLink() {
-      this.$ga.event('External links', 'click', this.to)
+      this.$ga.event("External links", "click", this.to)
     }
   }
 }
@@ -123,5 +123,6 @@ export default {
 }
 .nav-link {
   text-transform: uppercase;
+  text-decoration: none;
 }
 </style>

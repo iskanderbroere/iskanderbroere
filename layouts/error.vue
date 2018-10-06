@@ -16,13 +16,13 @@
 
 <script>
 export default {
-  name: 'NuxtError',
+  name: "NuxtError",
   props: {
     error: {
       type: Object,
       default() {
         return {
-          message: 'An error has occured.',
+          message: "An error has occured.",
           statusCode: 500
         }
       }
@@ -33,8 +33,8 @@ export default {
       title: this.message,
       meta: [
         {
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+          name: "viewport",
+          content: "width=device-width, initial-scale=1, shrink-to-fit=no"
         }
       ]
     }
@@ -44,7 +44,7 @@ export default {
       return (this.error && this.error.statusCode) || 500
     },
     message() {
-      return this.error.message || 'An error has occured.'
+      return this.error.message || "An error has occured."
     }
   }
 }
@@ -60,7 +60,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'skolar-sans-latin', system-ui;
+  font-family: "skolar-sans-latin", system-ui;
   font-weight: 400;
   position: absolute;
   top: 0;

@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import IUnorderedList from '~/components/IUnorderedList'
-import IListItem from '~/components/IListItem'
-import ILink from '~/components/ILink'
+import IUnorderedList from "~/components/IUnorderedList"
+import IListItem from "~/components/IListItem"
+import ILink from "~/components/ILink"
 
 export default {
   components: {
@@ -27,30 +27,46 @@ export default {
     ILink
   },
   head: () => ({
-    title: 'Projects'
+    title: "Projects"
   }),
   created() {
     // set non reactive static data
     // https://github.com/vuejs/vue/issues/6004
     this.prodProjects = [
       {
-        name: 'Personal website',
-        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'PostCSS']
+        name: "Personal website",
+        tags: ["Vue.js", "Nuxt", "Netlify", "SSG", "PostCSS"]
       },
       {
-        name: 'Depoclaim',
-        link: 'https://depoclaim.com',
-        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4', 'Markdown']
+        name: "Depoclaim",
+        link: "https://depoclaim.com",
+        tags: [
+          "Vue.js",
+          "Nuxt",
+          "Netlify",
+          "SSG",
+          "Contentful",
+          "Bootstrap 4",
+          "Markdown"
+        ]
       },
       {
-        name: 'Mátyás Bittenbinder',
-        link: 'https://mbittenbinder.com',
-        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4']
+        name: "Mátyás Bittenbinder",
+        link: "https://mbittenbinder.com",
+        tags: ["Vue.js", "Nuxt", "Netlify", "SSG", "Contentful", "Bootstrap 4"]
       },
       {
-        name: 'Jolien Wesselink',
-        link: 'https://jolienwesselink.nl',
-        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4', 'Markdown']
+        name: "Jolien Wesselink",
+        link: "https://jolienwesselink.nl",
+        tags: [
+          "Vue.js",
+          "Nuxt",
+          "Netlify",
+          "SSG",
+          "Contentful",
+          "Bootstrap 4",
+          "Markdown"
+        ]
       }
     ]
   }
