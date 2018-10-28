@@ -7,7 +7,7 @@
   "parserOptions": {
     "parser": "babel-eslint"
   },
-  "extends": ["eslint:recommended", "plugin:vue/recommended", "plugin:prettier/recommended", "plugin:vue-a11y/base"],
+  "extends": ["eslint:recommended", "plugin:vue/recommended", "plugin:prettier/recommended", "plugin:vue-a11y/recommended"],
   "plugins": ["vue", "vue-a11y"],
   "rules": {
     "semi": [2, "never"],
