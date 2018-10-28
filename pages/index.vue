@@ -4,7 +4,7 @@
     <h3>write</h3>
     <p>modern front-end web applications @
       <i-link
-        to="https://frontmen.nl"
+        to="https://www.frontmen.nl"
         external
         important>
         Frontmen
