@@ -50,22 +50,16 @@ export default {
         iconLink,
         navLink,
         important,
-        // css module props (alias where neccessary)
-        $style: {
-          link,
-          important: importantClass,
-          "icon-link": iconLinkClass,
-          "nav-link": navLinkClass,
-          "text-link": textLink
-        }
+        // css module object with classnames
+        $style
       } = this
       return [
-        link,
+        $style["link"],
         {
-          [textLink]: !iconLink,
-          [importantClass]: important,
-          [navLinkClass]: navLink,
-          [iconLinkClass]: iconLink
+          [$style["text-link"]]: !iconLink,
+          [$style["important"]]: important,
+          [$style["nav-link"]]: navLink,
+          [$style["icon-link"]]: iconLink
         }
       ]
     }
