@@ -25,7 +25,7 @@
     <i-hr/>
     <p><em>Eager to learn, always seeking to improve, perfectionistic yet practical, that is who I am.</em> Still reading? Hit me up! </p>
     <address>
-      <i-link to="mailto:iskanderbroere@gmail.com" important>iskanderbroere@gmail.com</i-link>
+      <i-link to="mailto:iskanderbroere@gmail.com" important external>iskanderbroere@gmail.com</i-link>
     </address>
   </main>
 </template>
