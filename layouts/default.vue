@@ -48,6 +48,18 @@ export default {
     ILink,
     IIcon
   },
+  async mounted() {
+    // asynchronously load webfonts once the component has mounted in the browser
+    const WebFontModule = await import("webfontloader")
+    // select the default import of the dynamically imported module
+    const WebFont = WebFontModule.default
+
+    WebFont.load({
+      typekit: {
+        id: "wke4nyp"
+      }
+    })
+  },
   head() {
     return {
       link: [

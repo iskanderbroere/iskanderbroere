@@ -1,4 +1,5 @@
 :root {
+  --body-font-family: 'skolar-sans-latin', system-ui;
   --bright-green: #0fcc83;
   --dark-green: #18865c;
   --dark-gray: #212529;
@@ -34,8 +35,11 @@ html {
     font-size: 20px;
   }
 }
+html.wf-active > body {
+  font-family: var(--body-font-family);
+}
 body {
-  font-family: 'skolar-sans-latin', system-ui;
+  font-family: system-ui;
   color: var(--dark-gray);
   font-weight: 400;
   background-color: var(--light-gray);

@@ -60,7 +60,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "skolar-sans-latin", system-ui;
+  font-family: var(--body-font-family);
   font-weight: 400;
   position: absolute;
   top: 0;
