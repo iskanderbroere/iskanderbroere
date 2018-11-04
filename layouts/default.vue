@@ -55,6 +55,8 @@ export default {
     const WebFont = WebFontModule.default
 
     WebFont.load({
+      classes: false,
+      events: false,
       typekit: {
         id: "wke4nyp"
       }
