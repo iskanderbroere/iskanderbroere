@@ -8,7 +8,7 @@
     "not ie <= 9"
   ],
   "engines": {
-    "node": "8.x.x"
+    "node": "10.x.x"
   },
   "scripts": {
     "cypress": "cypress open",
