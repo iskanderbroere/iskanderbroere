@@ -1,0 +1,10 @@
+{
+    "root": false,
+    "plugins": [
+      "cypress"
+    ],
+    "env": {
+      "cypress/globals": true
+    }
+
+}
