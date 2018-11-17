@@ -6,16 +6,11 @@
     :target="external ? '_blank' : false"
     rel="noopener noreferrer"
     @click="trackLink"
-    @keyup.enter="trackLink">
+    @keyup.enter="trackLink"
+  >
     <slot />
   </a>
-  <nuxt-link
-    v-else
-    :to="to"
-    :class="classNames">
-    <slot/>
-  </nuxt-link>
-
+  <nuxt-link v-else :to="to" :class="classNames"> <slot /> </nuxt-link>
 </template>
 
 <script>
@@ -96,13 +91,16 @@ export default {
   transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
 }
 .text-link:hover,
-.text-link:hover > * {
+.text-link:hover > *,
+.text-link:focus,
+.text-link:focus > * {
   color: var(--bright-green);
 }
 .important {
   color: var(--bright-green);
 }
-.important:hover {
+.important:hover,
+.important:focus {
   color: var(--dark-green);
 }
 .icon-link > svg {
@@ -112,7 +110,8 @@ export default {
   height: 30px;
   transition: fill 0.2s ease-in-out;
 }
-.icon-link:hover > svg {
+.icon-link:hover > svg,
+.icon-link:focus > svg {
   fill: var(--bright-green);
 }
 .nav-link {

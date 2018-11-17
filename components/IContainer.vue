@@ -1,7 +1,5 @@
 <template functional>
-  <div :class="$style.container">
-    <slot />
-  </div>
+  <div :class="[$style.container, data.class]"><slot /></div>
 </template>
 
 <style module>

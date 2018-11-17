@@ -2,11 +2,9 @@
   <main>
     <h2>hi, we're in an <em>elevator</em>, this is my <em>pitch</em>, i</h2>
     <h3>write</h3>
-    <p>modern front-end web applications @
-      <i-link
-        to="https://www.frontmen.nl"
-        external
-        important>
+    <p>
+      modern front-end web applications @
+      <i-link to="https://www.frontmen.nl" external important>
         Frontmen
       </i-link>
     </p>
@@ -22,10 +20,18 @@
         {{ item }}
       </template>
     </i-unordered-list>
-    <i-hr/>
-    <p><em>Eager to learn, always seeking to improve, perfectionistic yet practical, that is who I am.</em> Still reading? Hit me up! </p>
+    <i-hr />
+    <p>
+      <em
+        >Eager to learn, always seeking to improve, perfectionistic yet
+        practical, that is who I am.</em
+      >
+      Still reading? Hit me up!
+    </p>
     <address>
-      <i-link to="mailto:iskanderbroere@gmail.com" important external>iskanderbroere@gmail.com</i-link>
+      <i-link to="mailto:iskanderbroere@gmail.com" important external>
+        iskanderbroere@gmail.com
+      </i-link>
     </address>
   </main>
 </template>

@@ -1,12 +1,11 @@
 <template>
-  <ul :class="[$style.ul, { [$style.unstyled] : listStyle === 'none' }]">
+  <ul :class="[$style.ul, { [$style.unstyled]: listStyle === 'none' }]">
     <i-list-item
       v-for="item in items"
       :key="itemKey ? item[itemKey] : item"
-      :inline="inline">
-      <slot :item="item">
-        {{ item.length ? item : JSON.stringify(item) }}
-      </slot>
+      :inline="inline"
+    >
+      <slot :item="item">{{ item }}</slot>
     </i-list-item>
   </ul>
 </template>

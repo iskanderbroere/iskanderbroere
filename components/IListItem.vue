@@ -1,5 +1,5 @@
 <template functional>
-  <li :class="[{[$style['list-item-inline']] : props.inline}, data.class]">
+  <li :class="[{ [$style['list-item-inline']]: props.inline }, data.class]">
     <slot />
   </li>
 </template>

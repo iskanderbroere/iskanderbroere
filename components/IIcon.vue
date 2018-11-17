@@ -3,7 +3,8 @@
     :viewBox="props.viewBox"
     :aria-labelledby="props.accessibilityName"
     role="img"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <title :id="props.accessibilityName">{{ props.accessibilityName }}</title>
     <slot />
   </svg>

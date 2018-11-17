@@ -1,7 +1,6 @@
 <template functional>
-  <hr :class="$style.hr" >
+  <hr :class="$style.hr" />
 </template>
-
 
 <style module>
 .hr {

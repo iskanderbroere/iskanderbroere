@@ -3,7 +3,9 @@
     <h2>Projects</h2>
     <i-unordered-list :items="prodProjects" item-key="name">
       <template slot-scope="{ item: { name, link = null, tags } }">
-        <h3 v-if="link" ><i-link :to="link" external>{{ name }}</i-link></h3>
+        <h3 v-if="link">
+          <i-link :to="link" external>{{ name }}</i-link>
+        </h3>
         <h3 v-else>{{ name }}</h3>
         <i-unordered-list :items="tags" inline>
           <template slot-scope="{ item }">
