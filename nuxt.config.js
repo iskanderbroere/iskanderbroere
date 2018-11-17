@@ -5,7 +5,7 @@ export default {
       dir: "ltr"
     },
     titleTemplate: titleChunk =>
-      // If undefined or blank then we don't need the hyphen
+      // If undefined or blank, we don't need the hyphen
       titleChunk ? `${titleChunk} | Iskander Broere` : "Iskander Broere",
     meta: [
       { charset: "utf-8" },
@@ -31,6 +31,7 @@ export default {
     ],
     "@nuxtjs/pwa"
   ],
+  plugins: [{ src: "~/plugins/webfont", ssr: false }],
   sitemap: {
     hostname: "https://iskanderbroere.nl",
     generate: true
@@ -50,14 +51,21 @@ export default {
     background_color: "#f9f9f9",
     theme_color: "#f9f9f9"
   },
-  // loading: { color: 'var(--bright-green)' },
-  loading: false,
+  build: {
+    extend(
+      _,
+      {
+        isDev,
+        loaders: { cssModules }
+      }
+    ) {
+      cssModules.localIdentName = isDev ? "[local]_[hash:2]" : "[hash:base64:6]"
+    }
+  },
+  loading: { color: "var(--bright-green)", height: "1px" },
   css: ["~/assets/css/main.css"],
   render: {
     http2: { push: true },
     resourceHints: true
-  },
-  generate: {
-    fallback: true
   }
 }
