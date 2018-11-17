@@ -7,22 +7,11 @@
   "parserOptions": {
     "parser": "babel-eslint"
   },
-  "extends": ["eslint:recommended", "plugin:vue/recommended", "plugin:prettier/recommended", "plugin:vue-a11y/recommended"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:vue-a11y/recommended"],
   "plugins": ["vue", "vue-a11y"],
   "rules": {
-    "semi": [2, "never"],
     "no-console": "off",
     "no-debugger": "off",
-    "vue/max-attributes-per-line": [
-      2,
-      {
-        "singleline": 3,
-        "multiline": {
-          "max": 1,
-          "allowFirstLine": true
-        }
-      }
-    ],
     "prettier/prettier": [
       "error",
       {
