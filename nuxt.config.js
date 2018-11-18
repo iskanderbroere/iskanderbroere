@@ -62,6 +62,9 @@ export default {
       cssModules.localIdentName = isDev ? "[local]_[hash:2]" : "[hash:base64:6]"
     }
   },
+  generate: {
+    fallback: "404.html"
+  },
   loading: { color: "var(--bright-green)", height: "1px" },
   css: ["~/assets/css/main.css"],
   render: {
