@@ -11,7 +11,7 @@
     X-XSS-Protection = '1; mode=block'
     Strict-Transport-Security = 'max-age=31536000; includeSubDomains; preload'
     X-Content-Type-Options = 'nosniff'
-    Content-Security-Policy = "default-src 'none'; object-src 'none'; img-src 'self' www.google-analytics.com p.typekit.net; script-src 'self' use.typekit.net www.google-analytics.com; style-src 'self'; font-src 'self' use.typekit.net;"
+    Content-Security-Policy = "default-src 'none'; object-src 'none'; img-src 'self' www.google-analytics.com p.typekit.net; script-src 'self' use.typekit.net www.google-analytics.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' use.typekit.net;"
 [[headers]]
   for = '/_nuxt/*'
   [headers.values]
