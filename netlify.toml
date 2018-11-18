@@ -1,11 +1,9 @@
 [build]
   publish = "dist"
   command = "nuxt generate"
-[context]
-  NODE_VERSION = "10.13.0"
-  YARN_VERSION = "1.12.3"
-[context.production]
-  command = "nuxt generate"
+  [build.environment]
+    NODE_VERSION = "10.13.0"
+    YARN_VERSION = "1.12.3"
 [[headers]]
   for = "/*"
   [headers.values]
