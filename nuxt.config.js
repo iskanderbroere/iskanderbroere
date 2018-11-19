@@ -21,17 +21,11 @@ export default {
       }
     ]
   },
-  modules: [
-    "@nuxtjs/sitemap",
-    [
-      "@nuxtjs/google-analytics",
-      {
-        id: "UA-96952292-3"
-      }
-    ],
-    "@nuxtjs/pwa"
+  modules: ["@nuxtjs/sitemap", "@nuxtjs/pwa"],
+  plugins: [
+    { src: "~/plugins/webfont", ssr: false },
+    { src: "~/plugins/analytics", ssr: false }
   ],
-  plugins: [{ src: "~/plugins/webfont", ssr: false }],
   sitemap: {
     hostname: "https://iskanderbroere.nl",
     generate: true
