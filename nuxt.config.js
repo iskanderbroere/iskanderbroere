@@ -51,17 +51,6 @@ export default {
     background_color: "#f9f9f9",
     theme_color: "#f9f9f9"
   },
-  build: {
-    extend(
-      _,
-      {
-        isDev,
-        loaders: { cssModules }
-      }
-    ) {
-      cssModules.localIdentName = isDev ? "[local]_[hash:2]" : "[hash:base64:6]"
-    }
-  },
   generate: {
     fallback: "404.html"
   },
