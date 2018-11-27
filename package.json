@@ -30,7 +30,7 @@
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-vue-a11y": "^0.0.28",
-    "nuxt": "^2.2.0",
+    "nuxt": "^2.3.4",
     "prettier": "^1.15.2"
   }
 }
