@@ -1,9 +1,9 @@
-import webfontloader from "webfontloader"
+import webfontloader from 'webfontloader'
 
 webfontloader.load({
   classes: false,
   events: false,
   typekit: {
-    id: "wke4nyp"
+    id: 'wke4nyp'
   }
 })

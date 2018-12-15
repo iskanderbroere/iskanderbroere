@@ -20,13 +20,13 @@
 
 <script>
 export default {
-  name: "NuxtError",
+  name: 'NuxtError',
   props: {
     error: {
       type: Object,
       default() {
         return {
-          message: "An error has occured.",
+          message: 'An error has occured.',
           statusCode: 500
         }
       }
@@ -37,8 +37,8 @@ export default {
       title: this.message,
       meta: [
         {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1, shrink-to-fit=no"
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
         }
       ]
     }
@@ -48,7 +48,7 @@ export default {
       return (this.error && this.error.statusCode) || 500
     },
     message() {
-      return this.error.message || "An error has occured."
+      return this.error.message || 'An error has occured.'
     }
   }
 }

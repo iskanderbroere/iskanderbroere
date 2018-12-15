@@ -12,11 +12,11 @@
 
 <script>
 export default {
-  name: "IIcon",
+  name: 'IIcon',
   props: {
     viewBox: {
       type: String,
-      default: () => "0 0 24 24"
+      default: () => '0 0 24 24'
     },
     accessibilityName: {
       type: String,

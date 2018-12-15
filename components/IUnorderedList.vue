@@ -11,18 +11,18 @@
 </template>
 
 <script>
-import IListItem from "~/components/IListItem"
+import IListItem from '~/components/IListItem'
 
 export default {
-  name: "IUnorderedList",
+  name: 'IUnorderedList',
   components: {
     IListItem
   },
   props: {
     listStyle: {
       type: String,
-      validator: value => ["none", "standard"].includes(value),
-      default: () => "none"
+      validator: value => ['none', 'standard'].includes(value),
+      default: () => 'none'
     },
     items: {
       type: Array,

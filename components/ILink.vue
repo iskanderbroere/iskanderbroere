@@ -3,7 +3,7 @@
     v-if="external"
     :class="classNames"
     :href="to"
-    :target="external ? '_blank' : false"
+    :target="external && '_blank'"
     rel="noopener noreferrer"
     @click="trackLink"
     @keyup.enter="trackLink"
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "ILink",
+  name: 'ILink',
   props: {
     to: {
       type: String,
@@ -49,19 +49,19 @@ export default {
         $style
       } = this
       return [
-        $style["link"],
+        $style['link'],
         {
-          [$style["text-link"]]: !iconLink,
-          [$style["important"]]: important,
-          [$style["nav-link"]]: navLink,
-          [$style["icon-link"]]: iconLink
+          [$style['text-link']]: !iconLink,
+          [$style['important']]: important,
+          [$style['nav-link']]: navLink,
+          [$style['icon-link']]: iconLink
         }
       ]
     }
   },
   methods: {
     trackLink() {
-      this.$ga.event("External links", "click", this.to)
+      this.$ga.event('External links', 'click', this.to)
     }
   }
 }

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "IListItem",
+  name: 'IListItem',
   props: {
     inline: {
       type: Boolean,
@@ -18,7 +18,7 @@ export default {
 
 <style module>
 .list-item-inline:not(:last-child)::after {
-  content: " – ";
+  content: ' – ';
 }
 .list-item-inline {
   display: inline;
