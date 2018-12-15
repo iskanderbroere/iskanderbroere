@@ -21,16 +21,16 @@
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "2.6.0",
-    "@nuxtjs/sitemap": "^0.1.1",
+    "@nuxtjs/sitemap": "^0.1.2",
+    "nuxt": "^2.3.4",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
+    "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-vue-a11y": "^0.0.28",
-    "nuxt": "^2.3.4",
     "prettier": "^1.15.2"
   }
 }
