@@ -33,7 +33,7 @@ build/
 
 # Nuxt generate
 sw.*
-sitemap.xml
+sitemap.xml*
 
 # Serverless generated files
 .serverless/
