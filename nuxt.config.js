@@ -24,7 +24,6 @@ export default {
       { rel: 'dns-prefetch', href: 'https://use.typekit.net' },
       {
         rel: 'preconnect',
-        crossorigin: true,
         href: 'https://use.typekit.net'
       }
     ]
