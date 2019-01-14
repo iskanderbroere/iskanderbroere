@@ -19,7 +19,8 @@ export default {
         content:
           'I write modern front-end web applications @ Frontmen, am eager to learn, always seeking to improve, perfectionistic yet practical'
       }
-    ]
+    ],
+    link: [{ rel: 'dns-prefetch', href: '//use.typekit.net' }]
   },
   modules: [
     '@nuxtjs/sitemap',
