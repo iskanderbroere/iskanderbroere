@@ -34,7 +34,8 @@ export default {
   plugins: [{ src: '~/plugins/webfont', ssr: false }],
   sitemap: {
     hostname: 'https://iskanderbroere.nl',
-    generate: true
+    generate: true,
+    gzip: true
   },
   meta: {
     name: 'Iskander Broere - modern full-stack web applications',
