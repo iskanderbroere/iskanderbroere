@@ -73,7 +73,8 @@ export default {
       link: [
         {
           rel: 'canonical',
-          href: `https://iskanderbroere.nl${this.$route.path}`
+          // netlify deploy url
+          href: process.env.baseUrl + this.$route.path
         }
       ]
     }

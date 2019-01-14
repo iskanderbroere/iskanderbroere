@@ -33,7 +33,7 @@ export default {
   ],
   plugins: [{ src: '~/plugins/webfont', ssr: false }],
   sitemap: {
-    hostname: 'https://iskanderbroere.nl',
+    hostname: process.env.baseUrl,
     generate: true,
     gzip: true
   },
@@ -60,5 +60,9 @@ export default {
   render: {
     http2: { push: true },
     resourceHints: true
+  },
+  env: {
+    // netlify deploy url
+    baseUrl: process.env.DEPLOY_URL || 'https://iskanderbroere.nl'
   }
 }
