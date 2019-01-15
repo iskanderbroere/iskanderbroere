@@ -1,7 +1,7 @@
 <template>
   <main>
     <h2>Projects</h2>
-    <i-unordered-list :items="prodProjects" item-key="name">
+    <i-unordered-list :items="projects" item-key="name">
       <template slot-scope="{ item: { name, link = null, tags } }">
         <h3 v-if="link">
           <i-link :to="link" external>{{ name }}</i-link>
@@ -22,6 +22,61 @@ import IUnorderedList from '~/components/IUnorderedList'
 import IListItem from '~/components/IListItem'
 import ILink from '~/components/ILink'
 
+const projects = [
+  {
+    name: 'Personal website',
+    tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'PostCSS']
+  },
+  {
+    name: 'Corporate projects',
+    tags: [
+      'React',
+      'Next',
+      'Redux',
+      'Apollo GraphQL',
+      'SSR',
+      'Material-UI',
+      'JSS (CSS-in-JS)',
+      'Webpack',
+      'Express',
+      'Docker',
+      'Kubernetes',
+      'Azure DevOps'
+    ]
+  },
+  {
+    name: 'Depoclaim',
+    link: 'https://depoclaim.com',
+    tags: [
+      'Vue.js',
+      'Nuxt',
+      'Netlify',
+      'SSG',
+      'Contentful',
+      'Bootstrap 4',
+      'Markdown'
+    ]
+  },
+  {
+    name: 'Mátyás Bittenbinder',
+    link: 'https://mbittenbinder.com',
+    tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4']
+  },
+  {
+    name: 'Jolien Wesselink',
+    link: 'https://jolienwesselink.nl',
+    tags: [
+      'Vue.js',
+      'Nuxt',
+      'Netlify',
+      'SSG',
+      'Contentful',
+      'Bootstrap 4',
+      'Markdown'
+    ]
+  }
+]
+
 export default {
   components: {
     IUnorderedList,
@@ -29,48 +84,20 @@ export default {
     ILink
   },
   head: () => ({
-    title: 'Projects'
+    title: 'Projects',
+    meta: [
+      {
+        name: 'keywords',
+        content: projects
+          .reduce((accumulator, { tags }) => accumulator.concat(tags), [])
+          .join(', ')
+      }
+    ]
   }),
   created() {
     // set non reactive static data
     // https://github.com/vuejs/vue/issues/6004
-    this.prodProjects = [
-      {
-        name: 'Personal website',
-        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'PostCSS']
-      },
-      {
-        name: 'Depoclaim',
-        link: 'https://depoclaim.com',
-        tags: [
-          'Vue.js',
-          'Nuxt',
-          'Netlify',
-          'SSG',
-          'Contentful',
-          'Bootstrap 4',
-          'Markdown'
-        ]
-      },
-      {
-        name: 'Mátyás Bittenbinder',
-        link: 'https://mbittenbinder.com',
-        tags: ['Vue.js', 'Nuxt', 'Netlify', 'SSG', 'Contentful', 'Bootstrap 4']
-      },
-      {
-        name: 'Jolien Wesselink',
-        link: 'https://jolienwesselink.nl',
-        tags: [
-          'Vue.js',
-          'Nuxt',
-          'Netlify',
-          'SSG',
-          'Contentful',
-          'Bootstrap 4',
-          'Markdown'
-        ]
-      }
-    ]
+    this.projects = projects
   }
 }
 </script>
