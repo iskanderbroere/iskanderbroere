@@ -22,7 +22,7 @@
     "@nuxtjs/pwa": "2.6.0",
     "@nuxtjs/sitemap": "^0.2.0",
     "nuxt": "^2.3.4",
-    "webfontloader": "^1.6.28"
+    "nuxt-webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

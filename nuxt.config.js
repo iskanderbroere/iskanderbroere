@@ -29,9 +29,16 @@ export default {
         id: 'UA-96952292-3'
       }
     ],
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    'nuxt-webfontloader'
   ],
-  plugins: [{ src: '~/plugins/webfont', ssr: false }],
+  webfontloader: {
+    classes: false,
+    events: false,
+    typekit: {
+      id: 'wke4nyp'
+    }
+  },
   sitemap: {
     hostname: 'https://iskanderbroere.nl',
     generate: true,
