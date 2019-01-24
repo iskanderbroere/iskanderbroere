@@ -1,39 +1,35 @@
-/// <reference types="Cypress" />
-
-context("Default layout", () => {
-  beforeEach(() => {
-    cy.visit("/")
+describe('Default layout', () => {
+  before(() => {
+    cy.visit('/')
   })
   it('contains h1 with "iskanderbroere" in nav', () => {
-    cy.get("nav > h1").should("contain", "iskanderbroere")
+    cy.get('nav > h1').should('contain', 'iskanderbroere')
   })
 
-  describe("contains navigation icons", () => {
+  describe('contains navigation icons', () => {
     beforeEach(() => {
-      cy.get("nav")
-        .find('[class^="navicons"] > a')
-        .as("navigationLinks")
+      cy.get('nav')
+        .find('a')
+        .as('navigationLinks')
     })
-    it("contains a link to github", () => {
-      cy.get("@navigationLinks")
-        .contains("a", "github")
-        .should("have.prop", "href", "https://github.com/iskanderbroere/")
+    it('contains a link to github', () => {
+      cy.get('@navigationLinks')
+        .contains('a', 'github')
+        .should('have.prop', 'href', 'https://github.com/iskanderbroere/')
     })
-    it("contains a link to linkedin", () => {
-      cy.get("@navigationLinks")
-        .contains("a", "linkedin")
+    it('contains a link to linkedin', () => {
+      cy.get('@navigationLinks')
+        .contains('a', 'linkedin')
         .should(
-          "have.prop",
-          "href",
-          "https://www.linkedin.com/in/iskander-broere-51065615b/"
+          'have.prop',
+          'href',
+          'https://www.linkedin.com/in/iskander-broere-51065615b/'
         )
-        .should("not.have.prop", "rel", "noopener noreferrer")
     })
-    it("contains a link to projects", () => {
-      cy.get("@navigationLinks")
-        .contains("a", "Projects")
-        .should("have.prop", "pathname", "/projects")
-        .should("not.have.prop", "rel", "noopener noreferrer")
+    it('contains a link to projects', () => {
+      cy.get('@navigationLinks')
+        .contains('a', 'Projects')
+        .should('have.prop', 'pathname', '/projects')
     })
   })
 

@@ -9,6 +9,9 @@ yarn-error.log*
 # Optional npm cache directory
 .npm
 
+# cypress examples
+examples/
+
 # Dependency directories
 /node_modules
 /jspm_packages
