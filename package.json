@@ -10,7 +10,6 @@
     "node": "11.x.x"
   },
   "scripts": {
-    "cypress": "cypress open",
     "dev": "nuxt",
     "start": "nuxt start",
     "build": "nuxt build",
