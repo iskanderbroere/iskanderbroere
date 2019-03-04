@@ -30,7 +30,15 @@ export default {
       }
     ],
     '@nuxtjs/pwa',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    [
+      'nuxt-compress',
+      {
+        brotli: {
+          threshold: 10240
+        }
+      }
+    ]
   ],
   webfontloader: {
     classes: false,

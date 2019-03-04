@@ -24,6 +24,7 @@
     "@nuxtjs/pwa": "3.0.0-beta.10",
     "@nuxtjs/sitemap": "^0.2.0",
     "nuxt": "^2.4.5",
+    "nuxt-compress": "^1.0.2",
     "nuxt-webfontloader": "^1.0.0"
   },
   "devDependencies": {
