@@ -22,7 +22,7 @@
   "dependencies": {
     "@nuxtjs/google-analytics": "2.1.0",
     "@nuxtjs/pwa": "3.0.0-beta.14",
-    "@nuxtjs/sitemap": "0.2.0",
+    "@nuxtjs/sitemap": "0.2.2",
     "nuxt": "2.4.5",
     "nuxt-compress": "1.0.2",
     "nuxt-webfontloader": "1.0.0"
