@@ -23,12 +23,6 @@ export default {
   },
   modules: [
     '@nuxtjs/sitemap',
-    [
-      '@nuxtjs/google-analytics',
-      {
-        id: 'UA-96952292-3'
-      }
-    ],
     '@nuxtjs/pwa',
     'nuxt-webfontloader',
     'nuxt-compress'

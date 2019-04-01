@@ -5,8 +5,6 @@
     :href="to"
     :target="external && '_blank'"
     rel="noopener noreferrer"
-    @click="trackLink"
-    @keyup.enter="trackLink"
   >
     <slot />
   </a>
@@ -57,11 +55,6 @@ export default {
           [$style['icon-link']]: iconLink
         }
       ]
-    }
-  },
-  methods: {
-    trackLink() {
-      this.$ga.event('External links', 'click', this.to)
     }
   }
 }
