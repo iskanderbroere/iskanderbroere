@@ -22,7 +22,7 @@
   "dependencies": {
     "@nuxtjs/pwa": "3.0.0-beta.14",
     "@nuxtjs/sitemap": "0.2.2",
-    "nuxt": "2.5.1",
+    "nuxt": "2.6.3",
     "nuxt-compress": "1.0.2",
     "nuxt-webfontloader": "1.0.0"
   },
