@@ -1318,18 +1318,18 @@
     "@nuxtjs/pwa-utils" "3.0.0-beta.16"
     "@nuxtjs/workbox" "3.0.0-beta.16"
 
-"@nuxtjs/sitemap@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-1.1.0.tgz#7c7fffdaf7345ae0ab58455eed65c072d99a116c"
-  integrity sha512-g5N91aD8VNP124Igydex6utjhANfFF8ckbyuQOBO1XGiCLw/a+0RvIaq97ONmaKfCTUSOv1ZauygDslu69wA6w==
+"@nuxtjs/sitemap@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-1.2.0.tgz#6278c7a93314f1511ebb5491eb96e0f77f7d6dea"
+  integrity sha512-H51sCfe1A56qE1U3FNlWHJ3tm/ZTUPVr9Db6c8A81HzKT/rWnaJDycMlKss1xUzRkL98oubSkMazGhs4wyY/FA==
   dependencies:
     async-cache "^1.1.0"
-    consola "^2.6.0"
+    consola "^2.6.1"
     fs-extra "^7.0.1"
     is-https "^1.0.0"
     lodash.unionby "^4.8.0"
     minimatch "^3.0.4"
-    sitemap "^2.1.0"
+    sitemap "^2.2.0"
 
 "@nuxtjs/workbox@3.0.0-beta.16":
   version "3.0.0-beta.16"
@@ -7267,10 +7267,10 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-sitemap@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-2.1.0.tgz#1633cb88c196d755ad94becfb1c1bcacc6d3425a"
-  integrity sha512-AkfA7RDVCITQo+j5CpXsMJlZ/8ENO2NtgMHYIh+YMvex2Hao/oe3MQgNa03p0aWY6srCfUA1Q02OgiWCAiuccA==
+sitemap@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-2.2.0.tgz#98b8502762c5d7e8c77c9be5061dce85b326f1b0"
+  integrity sha512-9Zoi3UBhSIt5jWENDRUbzsqLMJ+Fha3P2aQ2PRghmh0FOivtHsC4FAJdkAEKHvATajd74BWp/57Yh7kz/UA53Q==
   dependencies:
     lodash "^4.17.10"
     url-join "^4.0.0"
