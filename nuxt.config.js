@@ -4,9 +4,7 @@ export default {
       lang: "en",
       dir: "ltr"
     },
-    titleTemplate: titleChunk =>
-      // If undefined or blank, we don't need the hyphen
-      titleChunk ? `${titleChunk} | Iskander Broere` : "Iskander Broere",
+    title: "Iskander Broere",
     meta: [
       { charset: "utf-8" },
       {

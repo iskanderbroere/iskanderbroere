@@ -83,17 +83,18 @@ export default {
     IListItem,
     ILink
   },
-  head: () => ({
-    title: "Projects",
-    meta: [
-      {
-        name: "keywords",
-        content: projects
-          .reduce((accumulator, { tags }) => accumulator.concat(tags), [])
-          .join(", ")
-      }
-    ]
-  }),
+  head() {
+    return {
+      meta: [
+        {
+          name: "keywords",
+          content: projects
+            .reduce((accumulator, { tags }) => accumulator.concat(tags), [])
+            .join(", ")
+        }
+      ]
+    }
+  },
   created() {
     // set non reactive static data
     // https://github.com/vuejs/vue/issues/6004
