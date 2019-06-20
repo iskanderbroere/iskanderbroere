@@ -58,9 +58,9 @@
 </template>
 
 <script>
-import IContainer from '~/components/IContainer'
-import ILink from '~/components/ILink'
-import IIcon from '~/components/IIcon'
+import IContainer from "~/components/IContainer"
+import ILink from "~/components/ILink"
+import IIcon from "~/components/IIcon"
 
 export default {
   components: {
@@ -72,7 +72,7 @@ export default {
     return {
       link: [
         {
-          rel: 'canonical',
+          rel: "canonical",
           href: `https://iskanderbroere.nl${this.$route.path}`
         }
       ]
