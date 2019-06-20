@@ -2,12 +2,12 @@
   publish = "dist"
   command = "nuxt generate --modern"
   [build.environment]
-    NODE_VERSION = "11.6.0"
-    YARN_VERSION = "1.13.0"
+    NODE_VERSION = "12.4.0"
+    YARN_VERSION = "1.17.0"
 [[headers]]
   for = "/*"
   [headers.values]
-    Referrer-Policy = 'no-referrer' 
+    Referrer-Policy = 'no-referrer'
     X-Frame-Options = 'DENY'
     X-XSS-Protection = '1; mode=block'
     Strict-Transport-Security = 'max-age=31536000; includeSubDomains; preload'

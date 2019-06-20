@@ -7,7 +7,7 @@
     "cover 99.5% in NL"
   ],
   "engines": {
-    "node": "11.x.x"
+    "node": "12.x.x"
   },
   "scripts": {
     "cypress": "cypress open",
