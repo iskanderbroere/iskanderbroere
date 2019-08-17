@@ -61,7 +61,7 @@ export default {
       "Express",
       "PostCSS",
       "SCSS",
-      "CSSinJS",
+      "CSS in JS",
       "Material Design",
       "Bootstrap 4",
       "Apollo GraphQL ⭐",
