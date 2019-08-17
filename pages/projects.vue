@@ -36,7 +36,7 @@ const projects = [
       "Apollo GraphQL",
       "SSR",
       "Material-UI",
-      "CSS-in-JS",
+      "CSS in JS",
       "Webpack",
       "Express",
       "Docker",
