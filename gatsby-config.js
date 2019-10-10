@@ -24,8 +24,10 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
-          'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-          'Content-Security-Policy': "default-src 'none'; object-src 'none'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; manifest-src 'self';"
+          "/*": [
+            "Strict-Transport-Security: 'max-age=31536000; includeSubDomains; preload'",
+            "Content-Security-Policy: 'default-src 'none'; object-src 'none'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; manifest-src 'self';"
+          ],
         }
       }
     }
