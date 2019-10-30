@@ -50,7 +50,7 @@ const IndexPage = () => (
     </h2>
     <h3>write</h3>
     <p>
-      modern front-end web applications @{" "}
+      modern web applications @{" "}
       <ExternalLink href="https://www.frontmen.nl" important>
         Frontmen
       </ExternalLink>
