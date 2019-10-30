@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "react"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/strict",
+    "plugin:react/all",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".tsx"
+        ]
+      }
+    ],
+    "react/jsx-no-literals": 0,
+    "react/prop-types": 0,
+    "react/jsx-max-depth": [
+      1,
+      {
+        "max": 6
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "linkComponents": [
+      // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
+      "Link",
+      {
+        "name": "Link",
+        "linkAttribute": "to"
+      }
+    ]
+  }
+}
