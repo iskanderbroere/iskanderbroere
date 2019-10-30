@@ -7,13 +7,7 @@ import { Helmet } from "react-helmet"
 const projects = [
   {
     name: "Personal website",
-    tags: [
-      "Gatsby",
-      "Preact",
-      "Netlify",
-      "Static site generator",
-      "Styled components",
-    ],
+    tags: ["Gatsby", "Preact", "Typescript", "Netlify", "Styled components"],
   },
   {
     name: "Corporate projects",
