@@ -17,7 +17,7 @@ module.exports = {
         start_url: "/",
         background_color: "#f9f9f9",
         theme_color: "#f9f9f9",
-        display: "minimal-ui"
+        display: "minimal-ui",
       },
     },
     {
@@ -26,11 +26,11 @@ module.exports = {
         headers: {
           "/*": [
             "Strict-Transport-Security: 'max-age=31536000; includeSubDomains; preload'",
-            "Content-Security-Policy: 'default-src 'none'; object-src 'none'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; manifest-src 'self';"
+            "Content-Security-Policy: 'default-src 'none'; object-src 'none'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; manifest-src 'self';",
           ],
-        }
-      }
-    }
+        },
+      },
+    },
     // {
     //   resolve: "gatsby-plugin-webpack-bundle-analyzer",
     //   options: {
