@@ -7,5 +7,5 @@ export const HorizontalRule = styled.hr`
   overflow: visible;
   /* bootstrap resets end */
   border: none;
-  border-bottom: 2px dotted ${props => props.theme.colors.grays[1]};
+  border-bottom: 2px dotted ${props => props.theme.colors.grays[700]};
 `
