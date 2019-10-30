@@ -6,14 +6,14 @@ const ErrorPage = () => (
   <div
     css={css`
       padding: 1rem;
-      background: ${props => props.theme.colors.grays[0]};
-      color: ${props => props.theme.colors.grays[1]};
+      background: ${props => props.theme.colors.grays[100]};
+      color: ${props => props.theme.colors.grays[700]};
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      font-family: ${props => props.theme.fonts.body};
+      font-family: ${props => props.theme.font.families.body};
       font-weight: 400;
     `}
   >
@@ -34,7 +34,7 @@ const ErrorPage = () => (
       <div
         css={css`
           font-size: 1.5rem;
-          color: ${props => props.theme.colors.grays[1]};
+          color: ${props => props.theme.colors.grays[700]};
           margin-bottom: 8px;
         `}
       >
