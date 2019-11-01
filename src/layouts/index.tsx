@@ -16,7 +16,7 @@ export const Layout: FC<LayoutProps> = ({ children, path }) => (
     <>
       <Helmet
         defaultTitle="Iskander Broere"
-        titleTemplate="Iskander Broerek - %s"
+        titleTemplate="Iskander Broere - %s"
       >
         <link href={`https://iskanderbroere.nl${path}`} rel="canonical" />
         <html dir="ltr" lang="en" />
