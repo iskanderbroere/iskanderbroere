@@ -60,11 +60,11 @@ html {
   -webkit-tap-highlight-color: transparent;
   /* bootstrap resets end */
   font-size: ${props => props.theme.font.sizes.md};
-
 }
 body {
   font-family: ${props => props.theme.font.families.body};
   color: ${props => props.theme.colors.grays[900]};
+  text-rendering: optimizeLegibility;
   background-color: ${props => props.theme.colors.grays[100]};
   /* bootstrap resets */
   margin: 0;
