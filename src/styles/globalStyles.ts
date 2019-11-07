@@ -65,7 +65,6 @@ html {
 body {
   font-family: ${props => props.theme.font.families.body};
   color: ${props => props.theme.colors.grays[900]};
-  text-rendering: optimizeLegibility;
   background-color: ${props => props.theme.colors.grays[100]};
   /* bootstrap resets */
   margin: 0;
