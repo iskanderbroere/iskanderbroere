@@ -1,6 +1,7 @@
 import React, { ReactNode, FC } from "react"
 import { ThemeProvider, css } from "styled-components"
 import { Helmet } from "react-helmet"
+import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions"
 import { Container } from "../components/Container"
 import { Link, ExternalLink } from "../components/Link"
 import { GlobalStyles } from "../styles/globalStyles"
@@ -9,9 +10,13 @@ import { TopNavigation } from "../components/TopNavigation"
 import { BottomNavigation } from "../components/BottomNavigation"
 import { theme } from "../styles/theme"
 
-export type LayoutProps = { children: ReactNode; path: string }
+export type LayoutProps = {
+  children: ReactNode
+  path: string
+  location: string
+}
 
-export const Layout: FC<LayoutProps> = ({ children, path }) => (
+export const Layout: FC<LayoutProps> = ({ children, path, location }) => (
   <ThemeProvider theme={theme}>
     <>
       <Helmet
@@ -54,7 +59,30 @@ export const Layout: FC<LayoutProps> = ({ children, path }) => (
             }
           `}
         >
-          {children}
+          <TransitionProvider
+            enter={{
+              opacity: 0,
+              transform: "scale(0.98) translateZ(0) perspective(1px)",
+              config: {
+                duration: 350,
+              },
+            }}
+            leave={{
+              opacity: 0,
+              transform: "scale(0.98) translateZ(0) perspective(1px)",
+              config: {
+                duration: 350,
+              },
+            }}
+            location={location}
+            mode="successive"
+            usual={{
+              opacity: 1,
+              transform: "scale(1) translateZ(0) perspective(1px)",
+            }}
+          >
+            <TransitionViews>{children}</TransitionViews>
+          </TransitionProvider>
         </div>
         <BottomNavigation>
           <nav>

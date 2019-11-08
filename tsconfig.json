@@ -9,6 +9,6 @@
     ],
     "jsx": "preserve"
   },
-  "include": ["src", "./gatsby-config.js", "cypress"],
+  "include": ["src", "./gatsby-config.js", "./gatsby-browser.js", "cypress"],
   "exclude": ["node_modules"]
 }
