@@ -62,6 +62,7 @@ export const Layout: FC<LayoutProps> = ({ children, path, location }) => (
           <TransitionProvider
             enter={{
               opacity: 0,
+              // perspective and translateZ to fix blurry text bug in Chrome
               transform: "scale(0.98) translateZ(0) perspective(1px)",
               config: {
                 duration: 350,
