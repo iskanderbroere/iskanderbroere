@@ -8,9 +8,10 @@ export const theme = {
     },
     sizes: {
       md: scaleFromSmToXxlBreakpoint("14px", "20px"),
-      lg: scaleFromSmToXxlBreakpoint("16px", "24px"),
-      xl: scaleFromSmToXxlBreakpoint("20px", "28px"),
-      xxl: scaleFromSmToXxlBreakpoint("24px", "32px"),
+      lg: scaleFromSmToXxlBreakpoint("18px", "26px"),
+      xl: scaleFromSmToXxlBreakpoint("22px", "30px"),
+      xxl: scaleFromSmToXxlBreakpoint("26px", "34px"),
+      xxxl: scaleFromSmToXxlBreakpoint("30px", "38px"),
     },
   },
   colors: {

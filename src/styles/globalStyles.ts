@@ -87,16 +87,16 @@ h4 {
   margin-bottom: 0;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: ${props => props.theme.font.sizes.xxxl};
 }
 h2 {
-  font-size: 2rem;
+  font-size: ${props => props.theme.font.sizes.xxl};
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: ${props => props.theme.font.sizes.xl};
 }
 h4 {
-  font-size: 1.2rem;
+  font-size: ${props => props.theme.font.sizes.lg};
 }
 p {
   margin: 0;
