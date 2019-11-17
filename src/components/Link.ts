@@ -24,7 +24,7 @@ const sharedLinkStyles = ({ important = false, navLink }: LinkProps) => css`
   color: ${props => props.theme.colors.grays[900]};
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  font-weight: 700;
+  font-weight: ${props => props.theme.font.weights.bold};
   transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
 
   &:hover {

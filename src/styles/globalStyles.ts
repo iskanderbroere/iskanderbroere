@@ -53,7 +53,6 @@ ${getInriaFontFamily({
 })}
 html {
   /* bootstrap resets */
-  line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
@@ -68,35 +67,37 @@ body {
   background-color: ${props => props.theme.colors.grays[100]};
   /* bootstrap resets */
   margin: 0;
-  font-weight: 400;
-  line-height: 1.5;
+  font-weight: ${props => props.theme.font.weights.regular};
+  line-height: 1.75;
   text-align: left;
   /* bootstrap resets end */
-}
-li,
-p {
-  line-height: 1.8;
 }
 h1,
 h2,
 h3,
 h4 {
-  font-weight: 700;
-  /* bootstrap resets */
+  font-weight: ${props => props.theme.font.weights.bold};
+  margin-bottom: ${props => props.theme.spacing[8]};
   margin-top: 0;
-  margin-bottom: 0;
 }
 h1 {
   font-size: ${props => props.theme.font.sizes.xxxl};
+  margin-bottom: ${props => props.theme.spacing[32]};
+  line-height: 1.25;
 }
 h2 {
   font-size: ${props => props.theme.font.sizes.xxl};
+  margin-bottom: ${props => props.theme.spacing[24]};
+  line-height: 1.35;
 }
 h3 {
   font-size: ${props => props.theme.font.sizes.xl};
+  margin-bottom: ${props => props.theme.spacing[16]};
+  line-height: 1.5;
 }
 h4 {
   font-size: ${props => props.theme.font.sizes.lg};
+  margin-bottom: ${props => props.theme.spacing[12]};
 }
 p {
   margin: 0;

@@ -1,5 +1,15 @@
-import { scaleFromSmToXxlBreakpoint } from "./utils"
 import { breakpoints } from "./breakpoints"
+
+const spacing = {
+  4: "4px",
+  8: "8px",
+  12: "12px",
+  16: "16px",
+  24: "24px",
+  32: "32px",
+  48: "48px",
+  64: "64px",
+}
 
 export const theme = {
   font: {
@@ -7,17 +17,24 @@ export const theme = {
       body: "'Inria Sans', system-ui",
     },
     sizes: {
-      md: scaleFromSmToXxlBreakpoint("14px", "20px"),
-      lg: scaleFromSmToXxlBreakpoint("18px", "26px"),
-      xl: scaleFromSmToXxlBreakpoint("22px", "30px"),
-      xxl: scaleFromSmToXxlBreakpoint("26px", "34px"),
-      xxxl: scaleFromSmToXxlBreakpoint("30px", "38px"),
+      sm: "14px",
+      md: "18px",
+      lg: "24px",
+      xl: "36px",
+      xxl: "48px",
+      xxxl: "60px",
+    },
+    weights: {
+      light: "300",
+      regular: "400",
+      bold: "700",
     },
   },
+  spacing,
   colors: {
     primary: {
-      main: "#0fcc83",
-      dark: "#18865c",
+      main: "hsl(157, 86%, 43%)",
+      dark: "hsl(157, 70%, 31%)",
     },
     grays: {
       50: "#fafafa",

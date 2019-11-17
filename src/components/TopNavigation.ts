@@ -4,7 +4,7 @@ export const TopNavigation = styled.nav`
   width: 100%;
   line-height: 1;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   padding: 16px 0;
   margin-bottom: 10px;

@@ -14,7 +14,7 @@ const ErrorPage = () => (
       align-items: center;
       flex-direction: column;
       font-family: ${props => props.theme.font.families.body};
-      font-weight: 400;
+      font-weight: ${props => props.theme.font.weights.regular};
     `}
   >
     <div

@@ -7,6 +7,6 @@ export const Container = styled.div`
   margin-left: auto;
   @media (min-width: ${props => props.theme.breakpoints.md}) {
     padding: 0;
-    max-width: 650px;
+    max-width: 600px;
   }
 `

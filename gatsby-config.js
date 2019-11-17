@@ -8,6 +8,19 @@ module.exports = {
     "gatsby-plugin-layout",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/blog`,
+        name: "posts",
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: ["gatsby-remark-embedder", "gatsby-remark-smartypants"],
+      },
+    },
     "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-manifest",
