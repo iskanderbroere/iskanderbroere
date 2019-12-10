@@ -3,13 +3,9 @@ import { Link as GatsbyLink } from "gatsby"
 
 interface LinkProps {
   important?: boolean
-  navLink?: boolean
 }
 
-export const sharedLinkStyles = ({
-  important = false,
-  navLink,
-}: LinkProps) => css`
+export const sharedLinkStyles = ({ important = false }: LinkProps = {}) => css`
   /* bootstrap resets */
   :not([href]):not([tabindex]) {
     color: inherit;
@@ -25,6 +21,7 @@ export const sharedLinkStyles = ({
   }
   /* end bootstrap resets */
   color: ${props => props.theme.colors.grays[900]};
+  text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   font-weight: ${props => props.theme.font.weights.bold};
@@ -32,6 +29,7 @@ export const sharedLinkStyles = ({
 
   &:hover {
     color: ${props => props.theme.colors.primary.main};
+    text-decoration: underline;
   }
 
   &:focus {
@@ -48,10 +46,6 @@ export const sharedLinkStyles = ({
         outline: 0;
         box-shadow: 0 0 2px 2px ${props => props.theme.colors.primary.main};
       }
-    `}
-  ${navLink &&
-    css`
-      text-decoration: none;
     `}
 `
 
