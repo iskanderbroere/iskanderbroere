@@ -8,10 +8,7 @@ exports.createPages = async ({
   const blogPostTemplate = path.resolve(`src/templates/blog-post.tsx`)
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMarkdownRemark(limit: 1000) {
         edges {
           node {
             frontmatter {
