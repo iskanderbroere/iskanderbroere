@@ -7,6 +7,10 @@ generates:
     plugins:
       - typescript
       - typescript-operations
+    config:
+      namingConvention:
+        enumValues: keep
+        transformUnderscore: false
     hooks:
       afterAllFileWrite:
         - eslint --fix
