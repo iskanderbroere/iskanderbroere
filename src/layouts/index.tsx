@@ -1,6 +1,8 @@
 import React, { ReactNode, FC } from "react"
 import { ThemeProvider, css } from "styled-components"
 import { Helmet } from "react-helmet"
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions"
 import { Container } from "../components/Container"
 import { Link, ExternalLink } from "../components/Link"
