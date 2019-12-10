@@ -8,34 +8,8 @@ const bootstrapResets = css`
     box-sizing: border-box;
   }
 
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-
   [tabindex="-1"]:focus:not(:focus-visible) {
     outline: 0 !important;
-  }
-
-  hr {
-    margin: 1rem 0;
-    color: inherit;
-    background-color: currentColor;
-    border: 0;
-    opacity: 0.25;
-  }
-
-  hr:not([size]) {
-    height: 1px;
   }
 
   h1,
@@ -152,28 +126,11 @@ const bootstrapResets = css`
     top: -0.5em;
   }
 
-  a {
-    color: #0d6efd;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #024dbc;
-    text-decoration: underline;
-  }
-
-  a:not([href]),
-  a:not([href]):hover {
-    color: inherit;
-    text-decoration: none;
-  }
-
   pre,
   code,
   kbd,
   samp {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-      "Courier New", monospace;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 1em;
   }
 
@@ -445,6 +402,11 @@ html {
   font-size: ${props => props.theme.font.sizes.md};
 }
 body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: ${props => props.theme.font.families.body};
   color: ${props => props.theme.colors.grays[900]};
   text-rendering: optimizeLegibility;

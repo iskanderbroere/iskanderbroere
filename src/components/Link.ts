@@ -6,7 +6,10 @@ interface LinkProps {
   navLink?: boolean
 }
 
-const sharedLinkStyles = ({ important = false, navLink }: LinkProps) => css`
+export const sharedLinkStyles = ({
+  important = false,
+  navLink,
+}: LinkProps) => css`
   /* bootstrap resets */
   :not([href]):not([tabindex]) {
     color: inherit;
