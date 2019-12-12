@@ -14,51 +14,26 @@ export const MarkdownHtml = styled.div.attrs<MarkdownHtmlProps>(({ html }) => ({
   samp {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    font-size: 1em;
   }
-  pre {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    overflow: auto;
-    font-size: 0.875em;
+  .gatsby-highlight pre[class*="language-"] {
+    padding: ${props =>
+      `${props.theme.spacing[12]} ${props.theme.spacing[16]}`};
   }
 
-  pre code {
-    font-size: inherit;
-    color: inherit;
-    word-break: normal;
+  .gatsby-highlight {
+    margin: ${props => props.theme.spacing[16]} 0px;
   }
 
-  code {
-    font-size: 0.875em;
-    color: #d63384;
-    word-wrap: break-word;
-  }
-
-  a > code {
-    color: inherit;
-  }
-
-  kbd {
-    padding: 0.2rem 0.4rem;
-    font-size: 0.875em;
-    color: #fff;
-    background-color: #212529;
-    border-radius: 0.2rem;
-  }
-
-  kbd kbd {
-    padding: 0;
-    font-size: 1em;
-    font-weight: 700;
+  .language-text,
+  .gatsby-highlight {
+    border-radius: 4px;
   }
 
   p {
     hyphens: auto;
   }
   ul {
-    list-style-type: armenian;
+    list-style-type: none;
     list-style-position: inside;
     padding: 0;
     margin-top: 0;
@@ -78,8 +53,7 @@ export const MarkdownHtml = styled.div.attrs<MarkdownHtmlProps>(({ html }) => ({
   i,
   strong,
   em,
-  small,
-  code {
+  small {
     line-height: 0;
   }
   a {

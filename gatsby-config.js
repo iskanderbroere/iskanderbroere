@@ -18,7 +18,16 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: ["gatsby-remark-embedder", "gatsby-remark-smartypants"],
+        plugins: [
+          "gatsby-remark-embedder",
+          "gatsby-remark-smartypants",
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: false,
+            },
+          },
+        ],
       },
     },
     "gatsby-plugin-sharp",

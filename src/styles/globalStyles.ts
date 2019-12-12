@@ -110,68 +110,6 @@ const bootstrapResets = css`
     font-size: 0.875em;
   }
 
-  sub,
-  sup {
-    position: relative;
-    font-size: 0.75em;
-    line-height: 0;
-    vertical-align: baseline;
-  }
-
-  sub {
-    bottom: -0.25em;
-  }
-
-  sup {
-    top: -0.5em;
-  }
-
-  pre,
-  code,
-  kbd,
-  samp {
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 1em;
-  }
-
-  pre {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    overflow: auto;
-    font-size: 0.875em;
-  }
-
-  pre code {
-    font-size: inherit;
-    color: inherit;
-    word-break: normal;
-  }
-
-  code {
-    font-size: 0.875em;
-    color: #d63384;
-    word-wrap: break-word;
-  }
-
-  a > code {
-    color: inherit;
-  }
-
-  kbd {
-    padding: 0.2rem 0.4rem;
-    font-size: 0.875em;
-    color: #fff;
-    background-color: #212529;
-    border-radius: 0.2rem;
-  }
-
-  kbd kbd {
-    padding: 0;
-    font-size: 1em;
-    font-weight: 700;
-  }
-
   figure {
     margin: 0 0 1rem;
   }
