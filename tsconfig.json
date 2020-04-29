@@ -21,10 +21,9 @@
   "include": [
     "src",
     "./next.config.js",
-    "./server.js",
-    "src/types/sass-modules.d.ts",
     "./package.json",
     "./postcss.config.json",
+    "./cypress.json",
     "cypress"
   ],
   "exclude": [

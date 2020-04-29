@@ -2,8 +2,8 @@
   publish = "public"
   command = "yarn build"
   [build.environment]
-    NODE_VERSION = "12.11.1"
-    YARN_VERSION = "1.19.1"
+    NODE_VERSION = "14.0.0"
+    YARN_VERSION = "1.22.4"
     YARN_FLAGS = "--frozen-lockfile"
     CYPRESS_INSTALL_BINARY = "0"
 [[headers]]
