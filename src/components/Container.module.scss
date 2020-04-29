@@ -1,0 +1,13 @@
+@import '../styles/breakpoints.scss';
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-breakpoint-up(md) {
+    padding: 0;
+    max-width: 680px;
+  }
+}

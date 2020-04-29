@@ -1,0 +1,19 @@
+@import '../styles/breakpoints.scss';
+
+.top-navigation-link-container {
+  display: flex;
+  > a {
+    display: flex;
+  }
+
+  a:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  @include media-breakpoint-up(md) {
+    align-items: center;
+    a:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../styles/theme.scss";
+
+.link {
+  // bootstrap resets
+  :not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+  }
+  :not([href]):not([tabindex]):hover,
+  :not([href]):not([tabindex]):focus {
+    color: inherit;
+    text-decoration: none;
+  }
+  :not([href]):not([tabindex]):focus {
+    outline: 0;
+  }
+  // end bootstrap resets
+
+  color: $color-gray-900;
+  position: relative;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  font-weight: 700;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+
+  &:hover {
+    color: $color-primary-500;
+  }
+
+  &:focus {
+    outline: 0;
+    border-radius: 2px;
+    background-color: $color-gray-100;
+    box-shadow: 0 0 0 1.5px $color-primary-700, 0 0 0 3.5px $color-primary-500;
+  }
+
+  &--important {
+    color: $color-primary-500;
+    &:hover {
+      color: $color-primary-700;
+    }
+  }
+
+  &--nav-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-lg;
+  }
+}
