@@ -7,8 +7,27 @@
       "dom.iterable",
       "esnext"
     ],
-    "jsx": "preserve"
-  },
-  "include": ["src", "./gatsby-config.js", "./gatsby-browser.js", "cypress"],
-  "exclude": ["node_modules"]
+    "jsx": "preserve",
+    "target": "es5",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+   },
+  "include": [
+    "src",
+    "./next.config.js",
+    "./server.js",
+    "src/types/sass-modules.d.ts",
+    "./package.json",
+    "./postcss.config.json",
+    "cypress"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

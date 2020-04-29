@@ -18,7 +18,10 @@
     "react"
   ],
   "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jsx-a11y/strict",
     "plugin:react/all",
     "prettier",
@@ -50,12 +53,9 @@
       "version": "detect"
     },
     "linkComponents": [
-      // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
-      "Link",
-      {
-        "name": "Link",
-        "linkAttribute": "to"
-      }
+      // Components used as alternatives to <a> for linking, eg. <Link href={ url } />
+      "InternalLink",
+      "ExternalLink"
     ]
   }
 }

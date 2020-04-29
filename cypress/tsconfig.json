@@ -10,7 +10,6 @@
     "types": [
       "cypress",
       "@types/testing-library__cypress",
-      "@types/cypress-axe",
       "@types/node"
     ]
   },

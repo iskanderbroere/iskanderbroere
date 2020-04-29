@@ -1,13 +1,14 @@
+import Head from "next/head"
 import React from "react"
+import { uniq } from "ramda"
 import { ExternalLink } from "../components/Link"
-import { UnorderedList } from "../components/UnorderedList"
 import { ListItem } from "../components/ListItem"
-import { Helmet } from "react-helmet"
+import { UnorderedList } from "../components/UnorderedList"
 
 const projects = [
   {
     name: "Personal website",
-    tags: ["Gatsby", "Preact", "Typescript", "Netlify", "Styled components"],
+    tags: ["Next.js", "Preact", "Typescript", "Netlify"],
   },
   {
     name: "Corporate projects",
@@ -70,39 +71,41 @@ const allTags: string[] = projects.reduce(
   (accumulator, { tags }) => [...accumulator, ...tags],
   [] as string[]
 )
-const uniqueTags = Array.from(new Set(allTags))
+const uniqueTags = uniq(allTags)
 
-const ProjectPage = () => (
-  <>
-    <Helmet>
-      <title>Projects</title>
-      <meta content={uniqueTags.join(", ")} name="keywords" />
-    </Helmet>
+function ProjectPage() {
+  return (
+    <>
+      <Head>
+        <title>Iskander Broere - Projects</title>
+        <meta content={uniqueTags.join(", ")} name="keywords" />
+      </Head>
 
-    <main>
-      <h2>Projects</h2>
-      <UnorderedList>
-        {projects.map(({ name, link = null, tags }) => (
-          <ListItem key={name}>
-            {link ? (
-              <h3>
-                <ExternalLink href={link}>{name}</ExternalLink>
-              </h3>
-            ) : (
-              <h3>{name}</h3>
-            )}
-            <UnorderedList>
-              {tags.map(tag => (
-                <ListItem inline key={tag}>
-                  {tag}
-                </ListItem>
-              ))}
-            </UnorderedList>
-          </ListItem>
-        ))}
-      </UnorderedList>
-    </main>
-  </>
-)
+      <main>
+        <h2>Projects</h2>
+        <UnorderedList>
+          {projects.map(({ name, link = null, tags }) => (
+            <ListItem key={name}>
+              {link ? (
+                <h3>
+                  <ExternalLink href={link}>{name}</ExternalLink>
+                </h3>
+              ) : (
+                <h3>{name}</h3>
+              )}
+              <UnorderedList>
+                {tags.map((tag) => (
+                  <ListItem inline key={tag}>
+                    {tag}
+                  </ListItem>
+                ))}
+              </UnorderedList>
+            </ListItem>
+          ))}
+        </UnorderedList>
+      </main>
+    </>
+  )
+}
 
 export default ProjectPage
