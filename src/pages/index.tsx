@@ -87,15 +87,9 @@ function IndexPage() {
         <p>
           <em>
             Eager to learn, always seeking to improve, perfectionistic yet
-            practical, that is who I am.
-          </em>{" "}
-          Still reading? Hit me up!
+            practical, that&#39;s who I am.
+          </em>
         </p>
-        <address>
-          <ExternalLink href="mailto:iskanderbroere@gmail.com" important>
-            iskanderbroere@gmail.com
-          </ExternalLink>
-        </address>
       </main>
     </>
   )
