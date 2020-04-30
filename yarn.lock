@@ -1625,13 +1625,6 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zeit/next-preact@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@zeit/next-preact/-/next-preact-0.1.0.tgz#ca777651f3addb3ff0c4f4699e20127ccfafa91f"
-  integrity sha512-hEJeMrplmeNTNqjAnqrnrVgshYGpqCmDNdM3dDlS2zvh4rasyBle8cpEJIoPwGlylQJlh+0mMADyTh/pv5z9qQ==
-  dependencies:
-    module-alias "2.0.6"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -5525,11 +5518,6 @@ mkdirp@^0.5.3, mkdirp@^0.5.4:
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
-
-module-alias@2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/module-alias/-/module-alias-2.0.6.tgz#abb2cfa07014f503514ad5061c6f03d79b591889"
-  integrity sha1-q7LPoHAU9QNRStUGHG8D15tZGIk=
 
 moment@2.24.0:
   version "2.24.0"

@@ -10,7 +10,6 @@
     "IE 11"
   ],
   "dependencies": {
-    "@zeit/next-preact": "^0.1.0",
     "caniuse-lite": "^1.0.30001048",
     "clsx": "^1.1.0",
     "next": "^9.3.6",

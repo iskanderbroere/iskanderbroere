@@ -52,7 +52,7 @@ function IndexPage() {
   return (
     <>
       <Head>
-        <title>Iskander Broere - Projects</title>
+        <title>Iskander Broere</title>
         <meta content={uniqueListItems.join(", ")} name="keywords" />
       </Head>
 
