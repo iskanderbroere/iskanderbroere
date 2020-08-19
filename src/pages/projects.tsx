@@ -1,5 +1,5 @@
-import Head from "next/head"
 import React from "react"
+import Head from "next/head"
 import { uniq } from "ramda"
 import { ExternalLink } from "../components/Link"
 import { ListItem } from "../components/ListItem"
