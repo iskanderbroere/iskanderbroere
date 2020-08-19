@@ -2,46 +2,55 @@
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 })
+/* eslint-disable @typescript-eslint/no-var-requires */
+const withPrefresh = require("@prefresh/next")
 
-module.exports = withBundleAnalyzer({
-  experimental: {
-    modern: true,
-    polyfillsOptimization: true,
-  },
+module.exports = withPrefresh(
+  withBundleAnalyzer({
+    experimental: {
+      modern: true,
+      polyfillsOptimization: true,
+    },
 
-  webpack(config, { dev, isServer }) {
-    const splitChunks = config.optimization && config.optimization.splitChunks
-    if (splitChunks) {
-      const cacheGroups = splitChunks.cacheGroups
-      const preactModules = /[\\/]node_modules[\\/](preact|preact-render-to-string|preact-context-provider)[\\/]/
-      if (cacheGroups.framework) {
-        cacheGroups.preact = Object.assign({}, cacheGroups.framework, {
-          test: preactModules,
-        })
-        cacheGroups.commons.name = "framework"
-      } else {
-        cacheGroups.preact = {
-          name: "commons",
-          chunks: "all",
-          test: preactModules,
+    webpack(config, { dev, isServer }) {
+      // Move Preact into the framework chunk instead of duplicating in routes:
+      const splitChunks = config.optimization && config.optimization.splitChunks
+      if (splitChunks) {
+        const cacheGroups = splitChunks.cacheGroups
+        const test = /[\\/]node_modules[\\/](preact|preact-render-to-string|preact-context-provider)[\\/]/
+        if (cacheGroups.framework) {
+          cacheGroups.preact = Object.assign({}, cacheGroups.framework, {
+            test,
+          })
+          // merge the 2 small commons+framework chunks:
+          cacheGroups.commons.name = "framework"
         }
       }
-    }
 
-    // Install webpack aliases:
-    const aliases = config.resolve.alias || (config.resolve.alias = {})
-    aliases.react = aliases["react-dom"] = "preact/compat"
+      if (isServer) {
+        // mark `preact` stuffs as external for server bundle to prevent duplicate copies of preact
+        config.externals.push(
+          /^(preact|preact-render-to-string|preact-context-provider)([\\/]|$)/
+        )
+      }
 
-    // inject Preact DevTools
-    if (dev && !isServer) {
-      const entry = config.entry
-      config.entry = () =>
-        entry().then((entries) => {
-          entries["main.js"] = ["preact/debug"].concat(entries["main.js"] || [])
-          return entries
-        })
-    }
+      // Install webpack aliases:
+      const aliases = config.resolve.alias || (config.resolve.alias = {})
+      aliases.react = aliases["react-dom"] = "preact/compat"
 
-    return config
-  },
-})
+      // Automatically inject Preact DevTools:
+      if (dev && !isServer) {
+        const entry = config.entry
+        config.entry = () =>
+          entry().then((entries) => {
+            entries["main.js"] = ["preact/debug"].concat(
+              entries["main.js"] || []
+            )
+            return entries
+          })
+      }
+
+      return config
+    },
+  })
+)
