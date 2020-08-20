@@ -11,11 +11,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Iskander Broere</title>
-        {/*
-         * this prevents a bad request to /favicon.ico
-         * https://stackoverflow.com/questions/1321878/how-to-prevent-favicon-ico-requests
-         */}
-        <link href="data:;base64,iVBORw0KGgo=" rel="icon" />
         <meta charSet="utf-8" />
         <meta
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
