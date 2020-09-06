@@ -22,7 +22,8 @@ export function Layout({ children }: LayoutProps) {
             "border-gray-700",
             "border-2",
             "border-dotted",
-            "text-4xl",
+            "text-3xl",
+            "sm:text-4xl",
             "md:text-5xl",
             "lg:text-6xl",
           ])}
