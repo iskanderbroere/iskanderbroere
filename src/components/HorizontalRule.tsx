@@ -1,6 +1,7 @@
 import React from "react"
-import styles from "./HorizontalRule.module.scss"
 
 export function HorizontalRule() {
-  return <hr className={styles["horizontal-rule"]} />
+  return (
+    <hr className="box-content h-0 my-2 overflow-visible border-0 border-b-2 border-dotted border-gray-700" />
+  )
 }

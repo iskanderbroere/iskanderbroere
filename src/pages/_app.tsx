@@ -2,8 +2,8 @@ import React from "react"
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { AppProps } from "next/app"
-import { Layout } from "../components/Layout"
-import "../styles/global.scss"
+import { Layout } from "../components"
+import "../styles/global.css"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()

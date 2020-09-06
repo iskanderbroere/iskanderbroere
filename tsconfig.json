@@ -21,6 +21,7 @@
   "include": [
     "src",
     "./next.config.js",
+    "./tailwind.config.js",
     "./package.json",
     "./postcss.config.json",
     "./cypress.json",

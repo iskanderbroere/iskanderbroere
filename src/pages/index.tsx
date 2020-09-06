@@ -1,10 +1,13 @@
 import React from "react"
 import Head from "next/head"
-import { HorizontalRule } from "../components/HorizontalRule"
-import { ExternalLink } from "../components/Link"
-import { ListItem } from "../components/ListItem"
-import { UnorderedList } from "../components/UnorderedList"
 import { concat, uniq } from "ramda"
+import {
+  ExternalLink,
+  Heading,
+  HorizontalRule,
+  ListItem,
+  UnorderedList,
+} from "../components"
 
 const useList = [
   "JavaScript",
@@ -56,18 +59,22 @@ function IndexPage() {
         <meta content={uniqueListItems.join(", ")} name="keywords" />
       </Head>
 
-      <main>
-        <h2>
+      <>
+        <Heading as="h1" level={1}>
           hi, we&apos;re in an <em>elevator</em>, this is my <em>pitch</em>, i
-        </h2>
-        <h3>write</h3>
+        </Heading>
+        <Heading as="h2" level={2}>
+          write
+        </Heading>
         <p>
           modern web applications @{" "}
           <ExternalLink href="https://www.frontmen.nl" important>
             Frontmen
           </ExternalLink>
         </p>
-        <h3>use</h3>
+        <Heading as="h2" level={2}>
+          use
+        </Heading>
         <UnorderedList>
           {useList.map((item) => (
             <ListItem inline key={item}>
@@ -75,7 +82,9 @@ function IndexPage() {
             </ListItem>
           ))}
         </UnorderedList>
-        <h3>like</h3>
+        <Heading as="h2" level={2}>
+          like
+        </Heading>
         <UnorderedList>
           {likeList.map((item) => (
             <ListItem inline key={item}>
@@ -90,7 +99,7 @@ function IndexPage() {
             practical, that&#39;s who I am.
           </em>
         </p>
-      </main>
+      </>
     </>
   )
 }

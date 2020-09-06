@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import styles from "./TopNavigationLinkContainer.module.scss"
+import clsx from "clsx"
 
 interface TopNavigationLinkContainerProps {
   children: ReactNode
@@ -8,7 +8,5 @@ interface TopNavigationLinkContainerProps {
 export function TopNavigationLinkContainer({
   children,
 }: TopNavigationLinkContainerProps) {
-  return (
-    <div className={styles["top-navigation-link-container"]}>{children}</div>
-  )
+  return <div className={clsx(["flex space-x-3 md:space-x-4"])}>{children}</div>
 }

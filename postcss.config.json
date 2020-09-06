@@ -1,5 +1,6 @@
 {
   "plugins": [
+    "tailwindcss",
     "postcss-flexbugs-fixes",
     [
       "postcss-preset-env",
@@ -12,7 +13,6 @@
           "custom-properties": false
         }
       }
-    ],
-    "postcss-responsive-type"
+    ]
   ]
 }

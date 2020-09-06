@@ -1,9 +1,7 @@
 import React from "react"
 import Head from "next/head"
 import { uniq } from "ramda"
-import { ExternalLink } from "../components/Link"
-import { ListItem } from "../components/ListItem"
-import { UnorderedList } from "../components/UnorderedList"
+import { ExternalLink, Heading, ListItem, UnorderedList } from "../components"
 
 const projects = [
   {
@@ -81,17 +79,21 @@ function ProjectPage() {
         <meta content={uniqueTags.join(", ")} name="keywords" />
       </Head>
 
-      <main>
-        <h2>Projects</h2>
+      <>
+        <Heading as="h1" level={1}>
+          Projects
+        </Heading>
         <UnorderedList>
           {projects.map(({ name, link = null, tags }) => (
             <ListItem key={name}>
               {link ? (
-                <h3>
+                <Heading as="h2" level={2}>
                   <ExternalLink href={link}>{name}</ExternalLink>
-                </h3>
+                </Heading>
               ) : (
-                <h3>{name}</h3>
+                <Heading as="h2" level={2}>
+                  {name}
+                </Heading>
               )}
               <UnorderedList>
                 {tags.map((tag) => (
@@ -103,7 +105,7 @@ function ProjectPage() {
             </ListItem>
           ))}
         </UnorderedList>
-      </main>
+      </>
     </>
   )
 }

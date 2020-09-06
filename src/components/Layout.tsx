@@ -1,7 +1,6 @@
+import clsx from "clsx"
 import React, { ReactNode } from "react"
-import { Container } from "./Container"
 import { InternalLink, ExternalLink } from "./Link"
-import { TopNavigationLinkContainer } from "./TopNavigationLinkContainer"
 import { TopNavigation } from "./TopNavigation"
 
 export type LayoutProps = {
@@ -10,21 +9,44 @@ export type LayoutProps = {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <Container>
+    <div className="px-4">
       <TopNavigation>
-        <InternalLink href="/" navLink>
+        <InternalLink
+          className={clsx([
+            "px-3",
+            "lg:px-5",
+            "leading-none",
+            "py-2",
+            "col-span-2",
+            "row-span-2",
+            "border-gray-700",
+            "border-2",
+            "border-dotted",
+            "text-4xl",
+            "md:text-5xl",
+            "lg:text-6xl",
+          ])}
+          href="/"
+          navLink
+        >
           Iskander Broere
         </InternalLink>
-        <TopNavigationLinkContainer>
-          <InternalLink href="/projects" navLink>
-            Projects
-          </InternalLink>
-          <ExternalLink href="https://github.com/iskanderbroere/" navLink>
-            GitHub
-          </ExternalLink>
-        </TopNavigationLinkContainer>
+        <InternalLink
+          className="px-3 py-2 border-gray-700 border-2 border-dotted box-content"
+          href="/projects"
+          navLink
+        >
+          Projects
+        </InternalLink>
+        <ExternalLink
+          className="px-3 py-2 border-gray-700 border-2 border-dotted box-content"
+          href="https://github.com/iskanderbroere/"
+          navLink
+        >
+          GitHub
+        </ExternalLink>
       </TopNavigation>
-      {children}
-    </Container>
+      <main>{children}</main>
+    </div>
   )
 }

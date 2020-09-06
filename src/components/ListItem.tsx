@@ -1,16 +1,19 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, HTMLProps } from "react"
 import clsx from "clsx"
-import styles from "./ListItem.module.scss"
 
 interface ListItemProps {
   children: ReactNode
   inline?: boolean
 }
 
-export function ListItem({ children, inline = false, ...rest }: ListItemProps) {
+export function ListItem({
+  children,
+  inline = false,
+  ...rest
+}: ListItemProps & HTMLProps<HTMLLIElement>) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <li className={clsx(inline && styles["list-item--inline"])} {...rest}>
+    <li className={clsx(inline && ["inline", "dash-separator"])} {...rest}>
       {children}
     </li>
   )

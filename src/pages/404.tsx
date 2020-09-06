@@ -1,5 +1,5 @@
 import React from "react"
-import { InternalLink } from "../components/Link"
+import { InternalLink } from "../components"
 
 function ErrorPage() {
   return (

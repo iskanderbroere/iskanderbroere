@@ -1,8 +1,0 @@
-.list-item {
-  &--inline {
-    display: inline;
-    &:not(:last-child):after {
-      content: " – ";
-    }
-  }
-}
