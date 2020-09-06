@@ -9,7 +9,7 @@ export type LayoutProps = {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="px-4">
+    <div className="container mx-auto">
       <TopNavigation>
         <InternalLink
           className={clsx([
