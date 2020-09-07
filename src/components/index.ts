@@ -1,5 +1,4 @@
 export * from "./UnorderedList"
-export * from "./HorizontalRule"
 export * from "./TopNavigation"
 export * from "./ListItem"
 export * from "./Layout"
