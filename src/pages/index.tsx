@@ -1,13 +1,7 @@
 import React from "react"
 import Head from "next/head"
 import { concat, uniq } from "ramda"
-import {
-  ExternalLink,
-  Heading,
-  HorizontalRule,
-  ListItem,
-  UnorderedList,
-} from "../components"
+import { ExternalLink, Heading, ListItem, UnorderedList } from "../components"
 
 const useList = [
   "JavaScript",
@@ -60,11 +54,11 @@ function IndexPage() {
       </Head>
 
       <>
-        <Heading as="h1" level={1} className="mb-4">
+        <Heading as="h1" level={1}>
           hi, we&apos;re in an <em>elevator</em>, this is my <em>pitch</em>, i
         </Heading>
         <article className="mb-4">
-          <Heading as="h2" level={2} className="mb-1">
+          <Heading as="h2" level={2}>
             write
           </Heading>
           <p>
@@ -75,7 +69,7 @@ function IndexPage() {
           </p>
         </article>
         <article className="mb-4">
-          <Heading as="h2" level={2} className="mb-1">
+          <Heading as="h2" level={2}>
             use
           </Heading>
           <UnorderedList>
@@ -87,7 +81,7 @@ function IndexPage() {
           </UnorderedList>
         </article>
         <article className="mb-4">
-          <Heading as="h2" level={2} className="mb-1">
+          <Heading as="h2" level={2}>
             like
           </Heading>
           <UnorderedList>

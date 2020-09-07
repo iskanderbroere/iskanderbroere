@@ -26,8 +26,8 @@ export const Heading = forwardRef(
       <Box
         className={clsx(
           ["font-light tracking-tight leading-none"],
-          level === 1 && ["text-3xl", "lg:text-4xl"],
-          level === 2 && ["text-2xl", "lg:text-3xl"],
+          level === 1 && ["text-3xl", "lg:text-4xl", "mb-4"],
+          level === 2 && ["text-2xl", "lg:text-3xl", "mb-2"],
           className
         )}
         as={defaultElement}

@@ -83,28 +83,26 @@ function ProjectPage() {
         <Heading as="h1" level={1}>
           Projects
         </Heading>
-        <UnorderedList>
-          {projects.map(({ name, link = null, tags }) => (
-            <ListItem key={name}>
-              {link ? (
-                <Heading as="h2" level={2}>
-                  <ExternalLink href={link}>{name}</ExternalLink>
-                </Heading>
-              ) : (
-                <Heading as="h2" level={2}>
-                  {name}
-                </Heading>
-              )}
-              <UnorderedList>
-                {tags.map((tag) => (
-                  <ListItem inline key={tag}>
-                    {tag}
-                  </ListItem>
-                ))}
-              </UnorderedList>
-            </ListItem>
-          ))}
-        </UnorderedList>
+        {projects.map(({ name, link = null, tags }) => (
+          <article key={name} className="mb-4">
+            {link ? (
+              <Heading as="h2" level={2}>
+                <ExternalLink href={link}>{name}</ExternalLink>
+              </Heading>
+            ) : (
+              <Heading as="h2" level={2}>
+                {name}
+              </Heading>
+            )}
+            <UnorderedList>
+              {tags.map((tag) => (
+                <ListItem inline key={tag}>
+                  {tag}
+                </ListItem>
+              ))}
+            </UnorderedList>
+          </article>
+        ))}
       </>
     </>
   )
