@@ -19,15 +19,16 @@ const defaultElement = "h1"
 // https://github.com/kripod/react-polymorphic-box
 export const Heading = forwardRef(
   <E extends ElementType = typeof defaultElement>(
-    { level = 1, ...props }: HeadingProps<E>,
+    { level = 1, className, ...props }: HeadingProps<E>,
     innerRef: typeof props.ref
   ) => {
     return (
       <Box
         className={clsx(
-          ["font-light"],
-          level === 1 && "text-3xl",
-          level === 2 && "text-2xl"
+          ["font-light tracking-tight leading-none"],
+          level === 1 && ["text-3xl", "lg:text-4xl"],
+          level === 2 && ["text-2xl", "lg:text-3xl"],
+          className
         )}
         as={defaultElement}
         // eslint-disable-next-line react/jsx-props-no-spreading

@@ -60,44 +60,47 @@ function IndexPage() {
       </Head>
 
       <>
-        <Heading as="h1" level={1}>
+        <Heading as="h1" level={1} className="mb-4">
           hi, we&apos;re in an <em>elevator</em>, this is my <em>pitch</em>, i
         </Heading>
-        <Heading as="h2" level={2}>
-          write
-        </Heading>
-        <p>
-          modern web applications @{" "}
-          <ExternalLink href="https://www.frontmen.nl" important>
-            Frontmen
-          </ExternalLink>
-        </p>
-        <Heading as="h2" level={2}>
-          use
-        </Heading>
-        <UnorderedList>
-          {useList.map((item) => (
-            <ListItem inline key={item}>
-              {item}
-            </ListItem>
-          ))}
-        </UnorderedList>
-        <Heading as="h2" level={2}>
-          like
-        </Heading>
-        <UnorderedList>
-          {likeList.map((item) => (
-            <ListItem inline key={item}>
-              {item}
-            </ListItem>
-          ))}
-        </UnorderedList>
-        <HorizontalRule />
-        <p>
-          <em>
-            Eager to learn, always seeking to improve, perfectionistic yet
-            practical, that&#39;s who I am.
-          </em>
+        <article className="mb-4">
+          <Heading as="h2" level={2} className="mb-1">
+            write
+          </Heading>
+          <p>
+            modern web applications @{" "}
+            <ExternalLink href="https://www.frontmen.nl" important>
+              Frontmen
+            </ExternalLink>
+          </p>
+        </article>
+        <article className="mb-4">
+          <Heading as="h2" level={2} className="mb-1">
+            use
+          </Heading>
+          <UnorderedList>
+            {useList.map((item) => (
+              <ListItem inline key={item}>
+                {item}
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </article>
+        <article className="mb-4">
+          <Heading as="h2" level={2} className="mb-1">
+            like
+          </Heading>
+          <UnorderedList>
+            {likeList.map((item) => (
+              <ListItem inline key={item}>
+                {item}
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </article>
+        <p className="italic">
+          Eager to learn, always seeking to improve, perfectionistic yet
+          practical, that&#39;s who I am.
         </p>
       </>
     </>

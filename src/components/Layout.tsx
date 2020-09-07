@@ -22,6 +22,7 @@ export function Layout({ children }: LayoutProps) {
             "border-gray-700",
             "border-2",
             "border-dotted",
+            "rounded-md",
             "text-3xl",
             "sm:text-4xl",
             "md:text-5xl",
@@ -33,14 +34,14 @@ export function Layout({ children }: LayoutProps) {
           Iskander Broere
         </InternalLink>
         <InternalLink
-          className="px-3 py-2 border-gray-700 border-2 border-dotted box-content"
+          className="px-3 py-2 border-gray-700 border-2 border-dotted rounded-md box-content"
           href="/projects"
           navLink
         >
           Projects
         </InternalLink>
         <ExternalLink
-          className="px-3 py-2 border-gray-700 border-2 border-dotted box-content"
+          className="px-3 py-2 border-gray-700 border-2 border-dotted rounded-md box-content"
           href="https://github.com/iskanderbroere/"
           navLink
         >
