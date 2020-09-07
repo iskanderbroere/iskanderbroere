@@ -2,6 +2,9 @@ import clsx from "clsx"
 import React, { ReactNode } from "react"
 import { InternalLink, ExternalLink } from "./Link"
 import { TopNavigation } from "./TopNavigation"
+import { SkipNavLink, SkipNavContent } from "@reach/skip-nav"
+
+const mainContentId = "main-content"
 
 export type LayoutProps = {
   children: ReactNode
@@ -11,6 +14,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="container mx-auto">
       <TopNavigation>
+        <SkipNavLink contentId={mainContentId} />
         <InternalLink
           className={clsx([
             "px-3",
@@ -49,6 +53,7 @@ export function Layout({ children }: LayoutProps) {
           GitHub
         </ExternalLink>
       </TopNavigation>
+      <SkipNavContent id={mainContentId} />
       <main>{children}</main>
     </div>
   )

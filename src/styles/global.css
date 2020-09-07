@@ -50,6 +50,32 @@
   content: " – ";
 }
 
+[data-reach-skip-link] {
+  @apply text-gray-900 font-bold text-lg;
+}
+
+[data-reach-skip-link]:focus {
+  @apply outline-none shadow-outline rounded border-gray-700 border-2 border-dotted bg-gray-50;
+}
+
+@screen sm {
+[data-reach-skip-link] {
+    @apply text-xl;
+  }
+}
+
+@screen md {
+[data-reach-skip-link] {
+    @apply text-2xl rounded-md;
+  }
+}
+
+@screen lg {
+[data-reach-skip-link] {
+    @apply text-3xl;
+  }
+}
+
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */

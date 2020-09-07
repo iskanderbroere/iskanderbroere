@@ -24,8 +24,7 @@ const getLinkClassnames = (
       "hover:text-green-500",
       "focus:outline-none",
       "focus:shadow-outline",
-      "focus:rounded-sm",
-      "focus:bg-gray-100",
+      "focus:bg-gray-50",
     ],
     important && ["text-green-500 hover:text-green-700"],
     navLink && [

@@ -4,6 +4,7 @@ import { useRouter } from "next/router"
 import { AppProps } from "next/app"
 import { Layout } from "../components"
 import "../styles/global.css"
+import "@reach/skip-nav/styles.css"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
