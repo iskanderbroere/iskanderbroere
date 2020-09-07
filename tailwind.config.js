@@ -39,7 +39,8 @@ module.exports = {
       screens: {
         sm: "100%",
         md: "100%",
-        lg: "42rem",
+        lg: "100%",
+        xl: "124rem",
       },
       padding: {
         default: "1rem",
