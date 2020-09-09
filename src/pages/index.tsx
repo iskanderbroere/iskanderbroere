@@ -92,7 +92,7 @@ function IndexPage() {
             ))}
           </UnorderedList>
         </article>
-        <p className="italic">
+        <p className="italic mb-4">
           Eager to learn, always seeking to improve, perfectionistic yet
           practical, that&#39;s who I am.
         </p>
