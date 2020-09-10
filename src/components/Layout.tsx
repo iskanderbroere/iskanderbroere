@@ -31,7 +31,8 @@ export function Layout({ children }: LayoutProps) {
             "text-3xl",
             "sm:text-4xl",
             "md:text-5xl",
-            "lg:text-6xl",
+            "lg:text-5xl",
+            "xl:text-6xl",
           ])}
           href="/"
           navLink
