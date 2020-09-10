@@ -8,42 +8,42 @@
   src: url("/assets/fonts/InriaSans-Light.ttf");
   font-style: normal;
   font-weight: 300;
-  font-display: optional;
+  font-display: swap;
 }
 @font-face {
   font-family: Inria Sans;
   src: url("/assets/fonts/InriaSans-LightItalic.ttf");
   font-style: italic;
   font-weight: 300;
-  font-display: optional;
+  font-display: swap;
 }
 @font-face {
   font-family: Inria Sans;
   src: url("/assets/fonts/InriaSans-Regular.ttf");
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
 }
 @font-face {
   font-family: Inria Sans;
   src: url("/assets/fonts/InriaSans-Italic.ttf");
   font-style: italic;
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
 }
 @font-face {
   font-family: Inria Sans;
   src: url("/assets/fonts/InriaSans-Bold.ttf");
   font-style: normal;
   font-weight: 700;
-  font-display: optional;
+  font-display: swap;
 }
 @font-face {
   font-family: Inria Sans;
   src: url("/assets/fonts/InriaSans-BoldItalic.ttf");
   font-style: italic;
   font-weight: 700;
-  font-display: optional;
+  font-display: swap;
 }
 
 .dash-separator:not(:last-child):after {
