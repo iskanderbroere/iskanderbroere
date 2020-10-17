@@ -15,7 +15,6 @@ export function TopNavigation({ children }: TopNavigationProps) {
         "gap-2",
         "my-4",
         "w-full",
-        "leading-none",
       ])}
     >
       {children}

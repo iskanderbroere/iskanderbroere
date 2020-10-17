@@ -1,6 +1,8 @@
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
+    standardFontWeights: true,
+    defaultLineHeights: true,
     purgeLayersByDefault: true,
   },
   purge: ["./src/**/*.{js,ts,jsx,tsx}"],

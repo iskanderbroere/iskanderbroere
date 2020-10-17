@@ -51,7 +51,7 @@
 }
 
 [data-reach-skip-link] {
-  @apply text-gray-900 font-bold text-lg;
+  @apply text-gray-900 font-bold text-lg leading-none;
 }
 
 [data-reach-skip-link]:focus {

@@ -2,14 +2,15 @@
 import React, { HTMLProps, PropsWithChildren } from "react"
 import NextLink, { LinkProps as NextLinkProps } from "next/link"
 import clsx from "clsx"
+import { useRouter } from "next/router"
 
 interface GetLinkClassnamesArgs {
-  important: boolean
   navLink: boolean
+  active?: boolean
 }
 
 const getLinkClassnames = (
-  { important, navLink }: GetLinkClassnamesArgs,
+  { navLink, active = false }: GetLinkClassnamesArgs,
   className: string | undefined
 ) =>
   clsx(
@@ -26,17 +27,18 @@ const getLinkClassnames = (
       "focus:shadow-outline",
       "focus:bg-gray-50",
     ],
-    important && ["text-green-500 hover:text-green-700"],
     navLink && [
       "no-underline",
       "flex",
       "items-center",
       "font-bold",
+      "leading-none",
       "text-lg",
       "sm:text-xl",
       "md:text-2xl",
       "lg:text-3xl",
     ],
+    active && ["text-green-500"],
     className
   )
 
@@ -51,14 +53,13 @@ type ExternalLinkProps = PropsWithChildren<
 
 export function ExternalLink({
   children,
-  important = false,
   navLink = false,
   className,
   ...rest
 }: ExternalLinkProps) {
   return (
     <a
-      className={getLinkClassnames({ important, navLink }, className)}
+      className={getLinkClassnames({ navLink }, className)}
       rel="noopener noreferrer"
       target="_blank"
       // eslint-disable-next-line react/jsx-props-no-spreading
@@ -76,16 +77,21 @@ type InternalLinkProps = NextLinkProps &
 export function InternalLink({
   children,
   href,
-  important = false,
   navLink = false,
   className,
   ...rest
 }: InternalLinkProps) {
+  const router = useRouter()
+  const linkIsActive = router.pathname == href
+
   return (
     <NextLink href={href} passHref>
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a
-        className={getLinkClassnames({ important, navLink }, className)}
+        className={getLinkClassnames(
+          { navLink, active: linkIsActive },
+          className
+        )}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
       >
