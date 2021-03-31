@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Head from "next/head"
 import { concat, uniq } from "ramda"
 import { ExternalLink, Heading, ListItem, UnorderedList } from "../components"

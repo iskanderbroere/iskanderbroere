@@ -22,10 +22,9 @@
     "src",
     "./next.config.js",
     "./tailwind.config.js",
+    "./next-env.d.ts",
     "./package.json",
-    "./postcss.config.json",
-    "./cypress.json",
-    "cypress"
+    "./postcss.config.json"
   ],
   "exclude": [
     "node_modules"
