@@ -12,7 +12,6 @@ export function ListItem({
   ...rest
 }: ListItemProps & HTMLProps<HTMLLIElement>) {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <li className={clsx(inline && ["inline", "dash-separator"])} {...rest}>
       {children}
     </li>

@@ -6,8 +6,8 @@ describe("Homepage", function () {
     cy.findByText("iskanderbroere").should("exist")
   })
   it("renders work link", function () {
-    cy.findByText("Frontmen")
-      .should("have.prop", "href", "https://www.frontmen.nl/")
+    cy.findByText("Software Bastards")
+      .should("have.prop", "href", "https://www.softwarebastards.nl/")
       .should("have.prop", "target", "_blank")
   })
 })

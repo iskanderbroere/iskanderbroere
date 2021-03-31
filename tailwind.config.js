@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin")
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -9,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Inria Sans"', "system-ui"],
+        sans: ["system-ui"],
       },
       colors: {
         green: {
@@ -46,7 +48,7 @@ module.exports = {
         xl: "124rem",
       },
       padding: {
-        default: "1rem",
+        DEFAULT: "1rem",
       },
     },
     boxShadow: (theme) => ({
@@ -71,5 +73,30 @@ module.exports = {
   variants: {
     borderRadius: ["responsive", "hover", "focus"],
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const n = {
+        "@supports (font-variation-settings: normal)": {
+          ".font-sans": {
+            "font-family": "'RecVar', system-ui",
+          },
+        },
+      }
+      const newUtilities = {
+        ".hank-1000": {
+          "font-variation-settings": "'wght' 1000, 'CASL' 1, 'MONO' 0",
+          "font-feature-settings": "'dlig' on, 'ss04' off",
+        },
+        ".hank-300": {
+          "font-variation-settings": "'wght' 300, 'CASL' 0, 'MONO' 0",
+          "font-feature-settings": "'dlig' on, 'ss04' on, 'pnum' on, 'ss05' on",
+        },
+      }
+
+      addUtilities(n)
+      addUtilities(newUtilities, {
+        variants: ["hover"],
+      })
+    }),
+  ],
 }

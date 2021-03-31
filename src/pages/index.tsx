@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Head from "next/head"
 import { concat, uniq } from "ramda"
 import { ExternalLink, Heading, ListItem, UnorderedList } from "../components"
@@ -45,6 +45,10 @@ const likeList = [
 const allListItems = concat(useList, likeList)
 const uniqueListItems = uniq(allListItems)
 
+export const config = {
+  unstable_runtimeJS: false,
+}
+
 function IndexPage() {
   return (
     <>
@@ -62,9 +66,9 @@ function IndexPage() {
             write
           </Heading>
           <p>
-            modern web applications @{" "}
-            <ExternalLink href="https://www.frontmen.nl" important>
-              Frontmen
+            modern web applications at{" "}
+            <ExternalLink href="https://www.softwarebastards.nl" important>
+              Software Bastards
             </ExternalLink>
           </p>
         </article>
@@ -92,7 +96,7 @@ function IndexPage() {
             ))}
           </UnorderedList>
         </article>
-        <p className="italic mb-4">
+        <p className="mb-4 transition-all transform-gpu hover:hank-1000 hank-300">
           Eager to learn, always seeking to improve, perfectionistic yet
           practical, that&#39;s who I am.
         </p>

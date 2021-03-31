@@ -4,6 +4,7 @@ import { useRouter } from "next/router"
 import { AppProps } from "next/app"
 import { Layout } from "../components"
 import "../styles/global.css"
+import "../styles/fonts.css"
 import "@reach/skip-nav/styles.css"
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -22,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="canonical"
         />
         <meta
-          content="I write modern web applications @ Frontmen, am eager to learn, always seeking to improve, perfectionistic yet practical"
+          content="I write modern web applications @ Software Bastards, am eager to learn, always seeking to improve, perfectionistic yet practical"
           name="description"
         />
       </Head>

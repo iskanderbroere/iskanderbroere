@@ -33,10 +33,10 @@ const getLinkClassnames = (
       "items-center",
       "font-bold",
       "leading-none",
-      "text-lg",
-      "sm:text-xl",
-      "md:text-2xl",
-      "lg:text-3xl",
+      // "text-lg",
+      // "sm:text-xl",
+      // "md:text-2xl",
+      // "lg:text-3xl",
     ],
     active && ["text-green-500"],
     className
@@ -62,7 +62,6 @@ export function ExternalLink({
       className={getLinkClassnames({ navLink }, className)}
       rel="noopener noreferrer"
       target="_blank"
-      // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
       {children}
@@ -86,13 +85,11 @@ export function InternalLink({
 
   return (
     <NextLink href={href} passHref>
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a
         className={getLinkClassnames(
           { navLink, active: linkIsActive },
           className
         )}
-        // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
       >
         {children}

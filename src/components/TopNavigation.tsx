@@ -6,18 +6,5 @@ interface TopNavigationProps {
 }
 
 export function TopNavigation({ children }: TopNavigationProps) {
-  return (
-    <nav
-      className={clsx([
-        "grid",
-        "grid-cols-3",
-        "grid-rows-2",
-        "gap-2",
-        "my-4",
-        "w-full",
-      ])}
-    >
-      {children}
-    </nav>
-  )
+  return <nav className={clsx(["my-4", "w-full"])}>{children}</nav>
 }
