@@ -1,5 +1,15 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "eslint.enable": true,
   "css.validate": false, // Disable css built-in lint so it doesnt error on tailwind stuff
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // Required: The website to display
+  "liveFrame.url": "http://localhost:3000",
+
+  // Optional: Title for the pane tab heading
+  "liveFrame.title": "Local Development",
+
+  // Optional: Which pane to open the frame in
+  "liveFrame.pane": "Beside",
 }

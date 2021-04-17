@@ -14,48 +14,52 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="container mx-auto">
       <TopNavigation>
-        <SkipNavLink contentId={mainContentId} />
-        <InternalLink
+        <SkipNavLink
+          contentId={mainContentId}
           className={clsx([
-            "px-3",
-            "lg:px-5",
+            "text-gray-900",
+            "font-bold",
+            // "text-lg",
             "leading-none",
-            "py-2",
+            "focus:outline-none",
+            "focus:shadow-outline",
+            "focus:border-gray-700",
+            "focus:border-2",
+            "focus:bg-gray-50",
+            // "sm:text-xl",
+            // "md:text-2xl",
+            // "lg:text-3xl",
+          ])}
+        />
+        <h1
+          className={clsx([
+            "leading-normal",
             "col-span-2",
             "row-span-2",
-            "border-gray-700",
-            "border-2",
-            "border-dotted",
-            "rounded",
-            "md:rounded-md",
-            "text-3xl",
-            "sm:text-4xl",
-            "md:text-5xl",
-            "lg:text-5xl",
-            "xl:text-6xl",
+            // "text-3xl",
+            // "sm:text-4xl",
+            // "md:text-5xl",
+            // "lg:text-5xl",
+            // "xl:text-6xl",
+            "font-black",
           ])}
-          href="/"
-          navLink
         >
           Iskander Broere
-        </InternalLink>
-        <InternalLink
-          className="px-3 py-2 border-gray-700 border-2 border-dotted rounded md:rounded-md box-content"
-          href="/projects"
-          navLink
-        >
+        </h1>
+        <InternalLink className="box-content" href="/projects" navLink>
           Projects
         </InternalLink>
         <ExternalLink
-          className="px-3 py-2 border-gray-700 border-2 border-dotted rounded md:rounded-md box-content"
+          className="box-content"
           href="https://github.com/iskanderbroere/"
           navLink
         >
           GitHub
         </ExternalLink>
       </TopNavigation>
-      <SkipNavContent id={mainContentId} />
-      <main>{children}</main>
+      <SkipNavContent id={mainContentId} as="main">
+        {children}
+      </SkipNavContent>
     </div>
   )
 }
