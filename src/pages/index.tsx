@@ -63,8 +63,8 @@ function IndexPage() {
           </Heading>
           <p>
             modern web applications @{" "}
-            <ExternalLink href="https://www.frontmen.nl" important>
-              Frontmen
+            <ExternalLink href="https://softwarebastards.nl/" important>
+              Software Bastards
             </ExternalLink>
           </p>
         </article>
