@@ -22,7 +22,6 @@ const config = {
 				'connect-src': ['self'],
 				'font-src': ['self'],
 				'manifest-src': ['self'],
-				'prefetch-src': ['self'],
 			},
 		},
 	},
