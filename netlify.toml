@@ -1,11 +1,8 @@
 [build]
-  publish = "out"
-  command = "yarn build"
+  publish = "build"
+  command = "pnpm build"
   [build.environment]
-    NODE_VERSION = "14.0.0"
-    YARN_VERSION = "1.22.4"
-    YARN_FLAGS = "--frozen-lockfile"
-    CYPRESS_INSTALL_BINARY = "0"
+    NODE_VERSION = "20.11.1"
 [[headers]]
   for = "/*"
   [headers.values]
