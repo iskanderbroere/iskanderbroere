@@ -20,7 +20,7 @@ const config = {
 				'script-src': ['self'],
 				'style-src': ['self', 'unsafe-inline'],
 				'connect-src': ['self'],
-				'font-src': ['self', 'unsafe-inline'],
+				'font-src': ['self', 'data:'],
 				'manifest-src': ['self'],
 			},
 		},
