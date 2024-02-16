@@ -14,6 +14,7 @@
 	<enhanced:img
 		src="../lib/assets/bg.jpg"
 		alt=""
+		sizes="min(1280px, 100vw)"
 		class="box-content h-auto w-64 rounded-full md:w-72 lg:w-96"
 	/>
 </div>
