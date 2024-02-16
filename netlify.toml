@@ -1,18 +1,14 @@
 [build]
-  publish = "out"
-  command = "yarn build"
+  publish = "build"
+  command = "pnpm build"
   [build.environment]
-    NODE_VERSION = "14.0.0"
-    YARN_VERSION = "1.22.4"
-    YARN_FLAGS = "--frozen-lockfile"
-    CYPRESS_INSTALL_BINARY = "0"
+    NODE_VERSION = "20.11.1"
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; font-src 'self'; manifest-src 'self'; prefetch-src 'self';"
     Permissions-Policy = "interest-cohort=()"
 [[headers]]
   for = "/*.css"
