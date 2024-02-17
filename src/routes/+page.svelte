@@ -1,9 +1,6 @@
-<script lang="ts">
-	import bg from '$lib/assets/bg.jpg';
-</script>
-
 <svelte:head>
 	<title>Iskander Broere</title>
+	<meta name="description" content="Iskander Broere - Web Developer" />
 </svelte:head>
 
 <main
