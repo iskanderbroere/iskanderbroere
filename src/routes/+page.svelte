@@ -4,7 +4,7 @@
 </svelte:head>
 
 <main
-	class="flex h-dvh flex-col items-center justify-center gap-1 px-2 text-gunmetal md:gap-2 lg:gap-3 dark:text-silver"
+	class="flex h-dvh flex-col items-center justify-center gap-1 px-2 text-gunmetal md:gap-2 lg:gap-3 dark:text-unohana"
 >
 	<h1 class="text-center text-xl md:text-2xl lg:text-4xl">iskander broere</h1>
 	<p class="text-center font-extrabold md:text-xl lg:text-2xl">webdev</p>
