@@ -22,6 +22,8 @@ const config = {
 				'connect-src': ['self'],
 				'font-src': ['self', 'data:'],
 				'manifest-src': ['self'],
+				'frame-ancestors': ['none'],
+				'frame-src': ['none'],
 			},
 		},
 	},

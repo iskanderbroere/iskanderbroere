@@ -6,10 +6,9 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     Permissions-Policy = "interest-cohort=()"
+    X-Content-Type-Options = "nosniff"
 [[headers]]
   for = "/*.css"
   [headers.values]
@@ -20,5 +19,25 @@
     Cache-Control = "public, max-age=31536000, immutable"
 [[headers]]
   for = "/*.ttf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for ="/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for ="/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for ="/*.avif"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
