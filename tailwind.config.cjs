@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config}*/
 const config = {
+	experimental: {
+		optimizeUniversalDefaults: true,
+	},
+
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
